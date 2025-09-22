@@ -1,208 +1,125 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StyleLabs – Roupas e Acessórios</title>
-  <meta name="description" content="StyleLabs: Roupas e acessórios modernos. Compre facilmente via WhatsApp.">
-  <style>
-    body {margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;}
-    a {text-decoration:none;}
-
-    /* Header */
-    header {background:#008080;color:white;padding:20px 0;text-align:center;}
-    header .logo {
-      max-height:90px;
-      width:auto;
-      display:block;
-      margin:0 auto 10px;
-      border:4px solid #c218c2;
-      border-radius:12px;
-      box-shadow:0 4px 8px rgba(0,0,0,0.3);
-    }
-
-    nav {
-      background:#e0e0e0;
-      padding:10px 0;
-    }
-    nav a {margin:0 12px;color:#008080;font-weight:bold;}
-    nav a:hover {color:#e65100;}
-
-    /* Main */
-    main {max-width:1000px;margin:30px auto;padding:0 10px;}
-    section {margin-bottom:40px;}
-    section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
-
-    /* Produtos */
-    .products {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-    .product {
-      background:white;
-      border-radius:6px;
-      box-shadow:0 0 6px rgba(0,0,0,0.1);
-      padding:15px;
-      max-width:240px;
-      text-align:center;
-    }
-    .product-name {background:#f3d6f9;color:#c218c2;padding:8px;border-radius:5px;font-weight:bold;margin-bottom:10px;}
-    .btn-buy {
-      display:inline-block;
-      background:#003399;
-      color:white;
-      padding:8px 12px;
-      border-radius:5px;
-      font-weight:bold;
-    }
-    .btn-buy:hover {background:#001a66;}
-
-    /* Contactos */
-    .contact-section {text-align:center;}
-    .visit-counter {
-      background:#22d563;
-      color:white;
-      padding:10px;
-      font-weight:bold;
-      margin-top:20px;
-      border-radius:5px;
-      display:inline-block;
-    }
-
-    /* Sugestões */
-    .suggestions-btn {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#22d563;
-      color:white;
-      padding:12px 20px;
-      border-radius:50px;
-      font-weight:bold;
-      box-shadow:0 2px 6px rgba(0,0,0,0.2);
-    }
-    .suggestions-btn:hover {background:#18a74d;}
-
-    /* Responsivo */
-    @media (max-width:768px){
-      .products{flex-direction:column;align-items:center;}
-      nav{display:flex;flex-direction:column;align-items:center;}
-      nav a{margin:6px 0;}
-      header .logo{max-height:70px;width:90%;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleLabs – Roupas e Acessórios</title>
+<style>
+body {margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;}
+header {background:#008080;color:white;padding:20px;text-align:center;}
+header img.logo {width:260px; max-width:90%; height:auto; display:block; margin:0 auto 10px auto; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+nav {background:#e0e0e0;padding:10px;text-align:center;}
+nav a {margin:0 12px;color:#008080;font-weight:bold;text-decoration:none;}
+nav a:hover {color:#e65100;}
+main {max-width:1000px;margin:30px auto;padding:0 10px;}
+section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
+.products {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+.product {background:white;border-radius:6px;box-shadow:0 0 6px rgba(0,0,0,0.1);padding:15px;max-width:240px;text-align:center;}
+.product-name {background:#f3d6f9;color:#c218c2;padding:8px;border-radius:5px;font-weight:bold;margin-bottom:10px;}
+.btn-buy {display:inline-block;background:#003399;color:white;padding:8px 12px;border-radius:5px;font-weight:bold;text-decoration:none;}
+.btn-buy:hover {background:#001a66;}
+.contact-section {text-align:center;margin-top:50px;}
+.visit-counter {background:#22d563;color:white;padding:10px;font-weight:bold;margin-top:20px;border-radius:5px;display:inline-block;}
+.suggestions-btn {position:fixed;bottom:20px;right:20px;background:#22d563;color:white;padding:12px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.suggestions-btn:hover {background:#18a74d;}
+@media (max-width:768px){.products{flex-direction:column;align-items:center;}}
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="logo-stylelabs.png" alt="StyleLabs Logo" class="logo">
-    <nav>
-      <a href="#home">Início</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#privacidade">Privacidade</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+<header>
+  <img src="logo.png" alt="StyleLabs Logo" class="logo">
+  <h1>StyleLabs – Roupas e Acessórios</h1>
+</header>
 
-  <main>
-    <!-- Início -->
-    <section id="home">
-      <h2>Bem-vindo à StyleLabs</h2>
-      <p>Encontre roupas e acessórios modernos e compre facilmente via WhatsApp.</p>
-    </section>
+<nav>
+  <a href="#home">Início</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#privacidade">Privacidade</a>
+  <a href="#contactos">Contactos</a>
+</nav>
 
-    <!-- Produtos -->
-    <section id="produtos">
-      <h2>🛒 Produtos – WhatsApp</h2>
-      <div class="products">
-        <div class="product">
-          <div class="product-name">Camiseta Estampada</div>
-          <a href="https://wa.me/351928332158?text=Quero+comprar+Camiseta+Estampada" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
-        </div>
-        <div class="product">
-          <div class="product-name">Vestido Casual</div>
-          <a href="https://wa.me/351928332158?text=Quero+comprar+Vestido+Casual" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
-        </div>
-        <div class="product">
-          <div class="product-name">Calças Jeans</div>
-          <a href="https://wa.me/351928332158?text=Quero+comprar+Calças+Jeans" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
-        </div>
-        <div class="product">
-          <div class="product-name">Acessórios Modernos</div>
-          <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
-        </div>
-      </div>
-    </section>
+<main>
 
-    <!-- Sobre -->
-    <section id="sobre">
-      <h2>Sobre a StyleLabs</h2>
-      <p>A StyleLabs foi criada por Carlos Oliveira com o objetivo de oferecer roupas e acessórios modernos de forma fácil e segura.</p>
-      <p>Nosso compromisso é entregar produtos de qualidade, dicas úteis e atendimento dedicado para a melhor experiência possível.</p>
-    </section>
+<section id="home">
+  <h2>Bem-vindo à StyleLabs</h2>
+  <p>Encontre roupas e acessórios modernos e compre facilmente via WhatsApp.</p>
+</section>
 
-    <!-- Privacidade -->
-    <section id="privacidade">
-      <h2>Política de Privacidade</h2>
-      <p>Respeitamos a sua privacidade. Dados de contato ou compras via WhatsApp são usados apenas para processar pedidos e oferecer suporte.</p>
-      <p>O site utiliza cookies para melhorar a experiência de navegação. Nenhuma informação pessoal é vendida ou compartilhada sem consentimento.</p>
-    </section>
+<section id="produtos">
+  <h2>🛒 Produtos – WhatsApp</h2>
+  <div class="products">
+    <div class="product">
+      <div class="product-name">Camiseta Estampada</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Camiseta+Estampada" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Vestido Casual</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Vestido+Casual" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Calças Jeans</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Calças+Jeans" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Acessórios Modernos</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Contactos -->
-    <section id="contacto" class="contact-section">
-      <h2>📞 Contactos</h2>
-      <ul>
-        <li>👤 Fundador: Carlos Oliveira</li>
-        <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
-        <li>📘 Facebook: <a href="https://www.facebook.com/share/19f9GhAERQ/" target="_blank">Casa Feliz</a></li>
-        <li>📸 Instagram: <a href="https://www.instagram.com/casafeliz_2025" target="_blank">@casafeliz_2025</a></li>
-      </ul>
-      <div class="visit-counter" id="visit-counter">Visitas: 0</div>
-    </section>
-  </main>
+<section id="sobre">
+  <h2>Sobre a StyleLabs</h2>
+  <p>A StyleLabs foi criada por Carlos Oliveira com o objetivo de oferecer roupas e acessórios modernos de forma fácil e segura.</p>
+</section>
 
-  <!-- Footer -->
-  <footer style="background:#008080;color:white;text-align:center;padding:15px;">
-    StyleLabs &copy; 2025 — Criado por Carlos Oliveira
-  </footer>
+<section id="privacidade">
+  <h2>Política de Privacidade</h2>
+  <p>Respeitamos a sua privacidade. Dados de contato ou compras via WhatsApp são usados apenas para processar pedidos e oferecer suporte.</p>
+</section>
 
-  <!-- Sugestões -->
-  <a href="mailto:contacto@stylelabs.pt?subject=Sugestões" class="suggestions-btn">💬 Sugestões</a>
+<section id="contactos" class="contact-section">
+  <h2>📞 Contactos</h2>
+  <ul>
+    <li>👤 Fundador: Carlos Oliveira</li>
+    <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
+    <li>📘 Facebook: <a href="https://www.facebook.com/share/19f9GhAERQ/" target="_blank">StyleLabs</a></li>
+    <li>📸 Instagram: <a href="https://www.instagram.com/casafeliz_2025" target="_blank">@casafeliz_2025</a></li>
+  </ul>
 
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <div class="visit-counter" id="contador-visitas">Visitas: 0</div>
+</section>
 
-  <script>
-    // Configuração Firebase
-    const firebaseConfig = {
-      apiKey: "TUA_API_KEY",
-      authDomain: "TUA_AUTH_DOMAIN",
-      databaseURL: "TUA_DATABASE_URL",
-      projectId: "TUA_PROJECT_ID",
-      storageBucket: "TUA_STORAGE_BUCKET",
-      messagingSenderId: "TUA_MESSAGING_SENDER_ID",
-      appId: "TUA_APP_ID"
-    };
+<footer>
+  StyleLabs © 2025 — Criado por Carlos Oliveira
+</footer>
 
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const counter = document.getElementById('visit-counter');
+<a href="mailto:contacto@stylelabs.pt?subject=Sugestões" class="suggestions-btn">💬 Sugestões / Recomendações</a>
 
-    // Nó do contador (mesmo do Casa Feliz)
-    const ref = db.ref('casa-feliz-visits');
+<!-- Firebase SDK para contador global -->
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "TUA_API_KEY",
+  authDomain: "TUA_AUTH_DOMAIN",
+  databaseURL: "TUA_DATABASE_URL",
+  projectId: "TUA_PROJECT_ID",
+  storageBucket: "TUA_STORAGE_BUCKET",
+  messagingSenderId: "TUA_MESSAGING_SENDER_ID",
+  appId: "TUA_APP_ID"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+const ref = db.ref('stylelabs-visits');
+const contadorSpan = document.getElementById('contador-visitas');
 
-    // Incrementa visitas
-    ref.transaction(current => (current || 0) + 1)
-      .then(() => {
-        ref.once('value', snap => {
-          counter.textContent = 'Visitas: ' + snap.val();
-        });
-      })
-      .catch(err => {
-        console.error('Erro no contador:', err);
-        counter.textContent = 'Visitas: erro';
-      });
-  </script>
+ref.transaction(current => (current || 0) + 1)
+   .then(() => ref.once('value', snap => contadorSpan.textContent = 'Visitas: ' + snap.val()))
+   .catch(err => console.error(err));
+</script>
 
 </body>
 </html>
