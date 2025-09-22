@@ -173,6 +173,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
 
   <script>
+    // Configuração Firebase
     const firebaseConfig = {
       apiKey: "TUA_API_KEY",
       authDomain: "TUA_AUTH_DOMAIN",
@@ -187,7 +188,10 @@
     const db = firebase.database();
     const counter = document.getElementById('visit-counter');
 
-    const ref = db.ref('casa-feliz-visits'); // mesmo contador do Casa Feliz
+    // Nó do contador (mesmo do Casa Feliz)
+    const ref = db.ref('casa-feliz-visits');
+
+    // Incrementa visitas
     ref.transaction(current => (current || 0) + 1)
       .then(() => {
         ref.once('value', snap => {
