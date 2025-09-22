@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,24 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StyleLabs – Roupas e Acessórios</title>
 <style>
-body {margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;}
-header {background:#008080;color:white;padding:20px;text-align:center;}
+body {margin:0; font-family:Arial,sans-serif; background:#f9f9f9; color:#333;}
+header {background:#008080; color:white; padding:20px; text-align:center;}
 header img.logo {width:260px; max-width:90%; height:auto; display:block; margin:0 auto 10px auto; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
-nav {background:#e0e0e0;padding:10px;text-align:center;}
-nav a {margin:0 12px;color:#008080;font-weight:bold;text-decoration:none;}
+nav {background:#e0e0e0; padding:10px; text-align:center;}
+nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
 nav a:hover {color:#e65100;}
-main {max-width:1000px;margin:30px auto;padding:0 10px;}
-section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
-.products {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-.product {background:white;border-radius:6px;box-shadow:0 0 6px rgba(0,0,0,0.1);padding:15px;max-width:240px;text-align:center;}
-.product-name {background:#f3d6f9;color:#c218c2;padding:8px;border-radius:5px;font-weight:bold;margin-bottom:10px;}
-.btn-buy {display:inline-block;background:#003399;color:white;padding:8px 12px;border-radius:5px;font-weight:bold;text-decoration:none;}
+main {max-width:1000px; margin:30px auto; padding:0 10px;}
+section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;}
+.products {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
+.product {background:white; border-radius:6px; box-shadow:0 0 6px rgba(0,0,0,0.1); padding:15px; max-width:240px; text-align:center;}
+.product-name {background:#f3d6f9; color:#c218c2; padding:8px; border-radius:5px; font-weight:bold; margin-bottom:10px;}
+.btn-buy {display:inline-block; background:#003399; color:white; padding:8px 12px; border-radius:5px; font-weight:bold; text-decoration:none;}
 .btn-buy:hover {background:#001a66;}
-.contact-section {text-align:center;margin-top:50px;}
-.visit-counter {background:#22d563;color:white;padding:10px;font-weight:bold;margin-top:20px;border-radius:5px;display:inline-block;}
-.suggestions-btn {position:fixed;bottom:20px;right:20px;background:#22d563;color:white;padding:12px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.contact-section {text-align:center; margin-top:50px;}
+
+/* Contador estilizado igual Casa Feliz */
+.visit-counter {
+  background:#22d563;
+  color:white;
+  font-weight:bold;
+  font-size:1.4em;
+  padding:12px 20px;
+  border-radius:12px;
+  display:inline-block;
+  text-align:center;
+  box-shadow:0 3px 6px rgba(0,0,0,0.2);
+  margin-top:20px;
+}
+.visit-counter span {
+  font-size:2em;
+  display:block;
+  margin-top:5px;
+}
+
+.suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
 .suggestions-btn:hover {background:#18a74d;}
-@media (max-width:768px){.products{flex-direction:column;align-items:center;}}
+@media (max-width:768px){.products{flex-direction:column; align-items:center;}}
 </style>
 </head>
 <body>
@@ -72,12 +90,12 @@ section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
 
 <section id="sobre">
   <h2>Sobre a StyleLabs</h2>
-  <p>A StyleLabs foi criada por Carlos Oliveira com o objetivo de oferecer roupas e acessórios modernos de forma fácil e segura.</p>
+  <p>A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos de forma prática e segura.</p>
 </section>
 
 <section id="privacidade">
   <h2>Política de Privacidade</h2>
-  <p>Respeitamos a sua privacidade. Dados de contato ou compras via WhatsApp são usados apenas para processar pedidos e oferecer suporte.</p>
+  <p>Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.</p>
 </section>
 
 <section id="contactos" class="contact-section">
@@ -89,7 +107,7 @@ section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
     <li>📸 Instagram: <a href="https://www.instagram.com/casafeliz_2025" target="_blank">@casafeliz_2025</a></li>
   </ul>
 
-  <div class="visit-counter" id="contador-visitas">Visitas: 0</div>
+  <div class="visit-counter">Visitas: <span id="visitas-count">0</span></div>
 </section>
 
 <footer>
@@ -98,27 +116,14 @@ section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
 
 <a href="mailto:contacto@stylelabs.pt?subject=Sugestões" class="suggestions-btn">💬 Sugestões / Recomendações</a>
 
-<!-- Firebase SDK para contador global -->
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
 <script>
-const firebaseConfig = {
-  apiKey: "TUA_API_KEY",
-  authDomain: "TUA_AUTH_DOMAIN",
-  databaseURL: "TUA_DATABASE_URL",
-  projectId: "TUA_PROJECT_ID",
-  storageBucket: "TUA_STORAGE_BUCKET",
-  messagingSenderId: "TUA_MESSAGING_SENDER_ID",
-  appId: "TUA_APP_ID"
-};
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-const ref = db.ref('stylelabs-visits');
-const contadorSpan = document.getElementById('contador-visitas');
-
-ref.transaction(current => (current || 0) + 1)
-   .then(() => ref.once('value', snap => contadorSpan.textContent = 'Visitas: ' + snap.val()))
-   .catch(err => console.error(err));
+// Contador de visitas
+document.addEventListener('DOMContentLoaded', () => {
+  let visitas = localStorage.getItem('contadorVisitas') || 0;
+  visitas = parseInt(visitas) + 1;
+  localStorage.setItem('contadorVisitas', visitas);
+  document.getElementById('visitas-count').textContent = visitas;
+});
 </script>
 
 </body>
