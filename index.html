@@ -130,14 +130,6 @@
           <div class="product-name">Acessórios Modernos</div>
           <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
         </div>
-        <div class="product">
-          <div class="product-name">Casaco de Inverno</div>
-          <a href="https://wa.me/351928332158?text=Quero+comprar+Casaco+de+Inverno" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
-        </div>
-        <div class="product">
-          <div class="product-name">Tênis Fashion</div>
-          <a href="https://wa.me/351928332158?text=Quero+comprar+Tênis+Fashion" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
-        </div>
       </div>
     </section>
 
@@ -181,7 +173,6 @@
   <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
 
   <script>
-    // Configuração Firebase igual ao Casa Feliz
     const firebaseConfig = {
       apiKey: "TUA_API_KEY",
       authDomain: "TUA_AUTH_DOMAIN",
@@ -195,8 +186,8 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
     const counter = document.getElementById('visit-counter');
-    const ref = db.ref('casa-feliz-visits'); // mesmo contador do Casa Feliz
 
+    const ref = db.ref('casa-feliz-visits'); // mesmo contador do Casa Feliz
     ref.transaction(current => (current || 0) + 1)
       .then(() => {
         ref.once('value', snap => {
