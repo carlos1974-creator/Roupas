@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StyleLabs – Roupas e Acessórios</title>
-<style>
-body { margin:0; font-family: Arial,sans-serif; background:#f9f9f9; color:#333; }
-header { background:#ff4d6d; color:white; padding:20px 0; text-align:center; position:relative; }
-header img.logo { max-height:100px; width:auto; display:block; margin:0 auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
-.lang-selector { position:absolute; top:20px; right:20px; display:flex; gap:8px; cursor:pointer; font-size:24px; user-select:none; }
-nav { background:#ffe6e6; display:flex; justify-content:center; padding:10px; position:sticky; top:0; z-index:1000; }
-nav a { margin:0 12px; text-decoration:none; color:#ff4d6d; font-weight:bold; }
-nav a:hover { color:#e60039; }
-main { max-width:1000px; margin:30px auto; padding:0 10px; }
-.products { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:20px 0; }
-.product { background:white; border-radius:6px; box-shadow:0 0 6px rgba(0,0,0,0.1); padding:15px; max-width:300px; text-align:center; }
-.product img { max-width:100%; border-radius:6px; }
-.product p { margin:10px 0; font-weight:bold; color:#e60039; }
-.btn-azul { padding:8px 12px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; display:inline-block; text-decoration:none; color:white; background:#003087; }
-.btn-azul:hover { background:#0050b3; }
-section h2 { text-align:center; color:#e60039; font-size:2em; margin-bottom:20px; }
-footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margin-top:40px; }
-@media(max-width:768px){
-  .lang-selector{position:static; margin-top:10px; justify-content:center;}
-  nav{flex-direction:column;}
-  nav a{margin:8px 0;}
-  .products{flex-direction:column; align-items:center;}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleLabs – Roupas e Acessórios</title>
+  <style>
+    body {margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;}
+    header {background:#ff4d6d;color:white;padding:20px 0;text-align:center;position:relative;}
+    header img.logo {
+      max-height:100px;
+      width:auto;
+      display:block;
+      margin:0 auto;
+      filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+      object-fit:contain;
+    }
+    nav {background:#ffe6e6;display:flex;justify-content:center;padding:10px;}
+    nav a {margin:0 12px;text-decoration:none;color:#ff4d6d;font-weight:bold;}
+    nav a:hover {color:#e60039;}
+    main {max-width:1000px;margin:30px auto;padding:0 10px;}
+    .products {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+    .product {
+      background:white;
+      border-radius:6px;
+      box-shadow:0 0 6px rgba(0,0,0,0.1);
+      padding:15px;
+      max-width:300px;
+      text-align:center;
+    }
+    .product img {
+      max-width:100%;
+      border-radius:6px;
+      margin-bottom:10px;
+      object-fit:contain;
+    }
+    .product p {margin:10px 0;font-weight:bold;color:#e60039;}
+    .btn-azul {
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:5px;
+      background:#003087;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .btn-azul:hover {background:#0050b3;}
+    section h2 {text-align:center;color:#e60039;font-size:2em;margin-bottom:20px;}
+    footer {background:#ff4d6d;color:white;text-align:center;padding:15px;margin-top:40px;}
+    @media(max-width:768px){
+      nav{flex-direction:column;}
+      nav a{margin:8px 0;}
+      .products{flex-direction:column;align-items:center;}
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <img src="image/Stylelabs-logo.png" alt="StyleLabs Logo" class="logo">
-  <div class="lang-selector">
-    <span class="flag" onclick="setLanguage('pt')">🇵🇹</span>
-    <span class="flag" onclick="setLanguage('en')">🇬🇧</span>
-  </div>
 </header>
 
 <nav>
-  <a href="#camisetas" id="nav-camisetas">Camisetas</a>
-  <a href="#acessorios" id="nav-acessorios">Acessórios</a>
-  <a href="#sobre" id="nav-sobre">Sobre</a>
-  <a href="#contactos" id="nav-contactos">Contactos</a>
+  <a href="#camisetas">Camisetas</a>
+  <a href="#acessorios">Acessórios</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contactos">Contactos</a>
 </nav>
 
 <main>
@@ -92,17 +113,13 @@ footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margi
 
 <section id="sobre">
   <h2>Sobre a StyleLabs</h2>
-  <p>A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios estilosos, acessíveis e de qualidade.</p>
+  <p>A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios estilosos e acessíveis.</p>
 </section>
 
 <section id="contactos">
   <h2>📞 Contactos</h2>
-  <ul>
-    <li>👤 Fundador: Carlos Oliveira</li>
-    <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
-    <li>📘 Facebook: <a href="https://www.facebook.com/share/19f9GhAERQ/" target="_blank">StyleLabs</a></li>
-    <li>📸 Instagram: <a href="https://www.instagram.com/casafeliz_2025" target="_blank">@stylelab</a></li>
-  </ul>
+  <p>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></p>
+  <p>📧 Email: contacto@stylelabs.pt</p>
 </section>
 
 </main>
@@ -110,14 +127,6 @@ footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margi
 <footer>
   StyleLabs © 2025 — Criado por Carlos Oliveira
 </footer>
-
-<script>
-function setLanguage(lang){
-  localStorage.setItem('lang', lang);
-  // Aqui podes adicionar traduções PT/EN
-}
-window.onload = function(){ setLanguage(localStorage.getItem('lang')||'pt'); };
-</script>
 
 </body>
 </html>
