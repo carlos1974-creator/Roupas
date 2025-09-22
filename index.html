@@ -6,10 +6,10 @@
 <title>StyleLabs – Roupas e Acessórios</title>
 <style>
 body {margin:0; font-family:Arial,sans-serif; background:#f9f9f9; color:#333;}
-header {background:#008080; color:white; padding:20px; text-align:center;}
+header {background:#008080; color:white; padding:20px; text-align:center; position:relative;}
 header img.logo {
   width:100%;
-  max-width:180px; /* desktop */
+  max-width:180px;
   height:auto;
   display:block;
   margin:0 auto 10px;
@@ -17,6 +17,20 @@ header img.logo {
   border-radius:12px;
   box-shadow:0 4px 8px rgba(0,0,0,0.3);
 }
+
+/* Bandeiras */
+.lang-switch {
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+.lang-switch img {
+  width:32px;
+  height:auto;
+  margin-left:8px;
+  cursor:pointer;
+}
+
 nav {background:#e0e0e0; padding:10px; text-align:center;}
 nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
 nav a:hover {color:#e65100;}
@@ -63,8 +77,9 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 
 /* Responsividade */
 @media (max-width:768px) {
-  header img.logo { max-width:120px; } /* logo menor em telemóveis */
+  header img.logo { max-width:120px; }
   .products{flex-direction:column; align-items:center;}
+  .lang-switch {top:5px; right:5px;}
 }
 </style>
 </head>
@@ -72,68 +87,71 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 
 <header>
   <img src="logo.png" alt="StyleLabs Logo" class="logo">
+  <div class="lang-switch">
+    <img src="pt.png" alt="Português" id="pt">
+    <img src="en.png" alt="English" id="en">
+  </div>
   <h1>StyleLabs – Roupas e Acessórios</h1>
 </header>
 
 <nav>
-  <a href="#home">Início</a>
-  <a href="#produtos">Produtos</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#privacidade">Privacidade</a>
-  <a href="#contactos">Contactos</a>
+  <a href="#home" class="lang" data-key="nav_home">Início</a>
+  <a href="#produtos" class="lang" data-key="nav_produtos">Produtos</a>
+  <a href="#sobre" class="lang" data-key="nav_sobre">Sobre</a>
+  <a href="#privacidade" class="lang" data-key="nav_privacidade">Privacidade</a>
+  <a href="#contactos" class="lang" data-key="nav_contactos">Contactos</a>
 </nav>
 
 <main>
 
 <section id="home">
-  <h2 style="color:#e65100;">Bem-vindo à StyleLabs</h2>
-  <p style="text-align:center;">Encontre roupas e acessórios modernos e personalizáveis</p>
+  <h2 style="color:#e65100;" class="lang" data-key="home_title">Bem-vindo à StyleLabs</h2>
+  <p style="text-align:center;" class="lang" data-key="home_text">Encontre roupas e acessórios modernos e personalizáveis</p>
 </section>
 
 <section id="produtos">
-  <h2>🛒 Produtos</h2>
+  <h2 class="lang" data-key="produtos_title">🛒 Produtos</h2>
   <div class="products">
     <div class="product">
-      <div class="product-name">Camiseta Estampada</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Camiseta+Estampada" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+      <div class="product-name lang" data-key="prod1">Camiseta Estampada</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Camiseta+Estampada" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
     </div>
     <div class="product">
-      <div class="product-name">Vestido Casual</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Vestido+Casual" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+      <div class="product-name lang" data-key="prod2">Vestido Casual</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Vestido+Casual" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
     </div>
     <div class="product">
-      <div class="product-name">Calças Jeans</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Calças+Jeans" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+      <div class="product-name lang" data-key="prod3">Calças Jeans</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Calças+Jeans" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
     </div>
     <div class="product">
-      <div class="product-name">Acessórios Modernos</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy">Comprar via WhatsApp</a>
+      <div class="product-name lang" data-key="prod4">Acessórios Modernos</div>
+      <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
     </div>
   </div>
 </section>
 
 <section id="sobre">
-  <h2>Sobre a StyleLabs</h2>
-  <p>A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.</p>
+  <h2 class="lang" data-key="sobre_title">Sobre a StyleLabs</h2>
+  <p class="lang" data-key="sobre_text">A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.</p>
 </section>
 
 <section id="privacidade">
-  <h2>Política de Privacidade</h2>
-  <p>Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.</p>
+  <h2 class="lang" data-key="privacidade_title">Política de Privacidade</h2>
+  <p class="lang" data-key="privacidade_text">Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.</p>
 </section>
 
 <section id="contactos" class="contact-section">
-  <h2>📞 Contactos</h2>
+  <h2 class="lang" data-key="contactos_title">📞 Contactos</h2>
   <ul>
     <li>👤 Fundador: Carlos Oliveira</li>
     <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
   </ul>
-
   <div class="visit-counter">Visitas: <span id="visitas-count">0</span></div>
 </section>
 
 <footer>
-  StyleLabs © 2025 — Criado por Carlos Oliveira
+  <span class="lang" data-key="footer">StyleLabs © 2025 — Criado por Carlos Oliveira</span>
 </footer>
 
 <a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
@@ -146,6 +164,62 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.setItem('contadorVisitas', visitas);
   document.getElementById('visitas-count').textContent = visitas;
 });
+
+// Tradução
+const translations = {
+  en: {
+    nav_home: "Home",
+    nav_produtos: "Products",
+    nav_sobre: "About",
+    nav_privacidade: "Privacy",
+    nav_contactos: "Contacts",
+    home_title: "Welcome to StyleLabs",
+    home_text: "Find modern and customizable clothes and accessories",
+    produtos_title: "🛒 Products",
+    prod1: "Printed T-Shirt",
+    prod2: "Casual Dress",
+    prod3: "Jeans",
+    prod4: "Modern Accessories",
+    buy: "Buy via WhatsApp",
+    sobre_title: "About StyleLabs",
+    sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern and customizable clothes and accessories easily and safely.",
+    privacidade_title: "Privacy Policy",
+    privacidade_text: "We respect your privacy. All data provided via WhatsApp is used only to process orders and support.",
+    contactos_title: "📞 Contacts",
+    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
+  },
+  pt: {
+    nav_home: "Início",
+    nav_produtos: "Produtos",
+    nav_sobre: "Sobre",
+    nav_privacidade: "Privacidade",
+    nav_contactos: "Contactos",
+    home_title: "Bem-vindo à StyleLabs",
+    home_text: "Encontre roupas e acessórios modernos e personalizáveis",
+    produtos_title: "🛒 Produtos",
+    prod1: "Camiseta Estampada",
+    prod2: "Vestido Casual",
+    prod3: "Calças Jeans",
+    prod4: "Acessórios Modernos",
+    buy: "Comprar via WhatsApp",
+    sobre_title: "Sobre a StyleLabs",
+    sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.",
+    privacidade_title: "Política de Privacidade",
+    privacidade_text: "Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.",
+    contactos_title: "📞 Contactos",
+    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
+  }
+};
+
+document.getElementById('en').addEventListener('click', () => setLanguage('en'));
+document.getElementById('pt').addEventListener('click', () => setLanguage('pt'));
+
+function setLanguage(lang) {
+  document.querySelectorAll('.lang').forEach(el => {
+    const key = el.getAttribute('data-key');
+    el.textContent = translations[lang][key];
+  });
+}
 </script>
 
 </body>
