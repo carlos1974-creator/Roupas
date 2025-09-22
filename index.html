@@ -6,8 +6,8 @@
 <title>StyleLabs – Roupas e Acessórios</title>
 <style>
 body { margin:0; font-family: Arial,sans-serif; background:#f9f9f9; color:#333; }
-header { background:#ff4d6d; color:white; padding:20px 0 50px 0; text-align:center; position:relative; }
-header img.logo { max-height:100px; display:block; margin:0 auto 10px auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+header { background:#ff4d6d; color:white; padding:20px 0; text-align:center; position:relative; }
+header img.logo { max-height:100px; width:auto; display:block; margin:0 auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
 .lang-selector { position:absolute; top:20px; right:20px; display:flex; gap:8px; cursor:pointer; font-size:24px; user-select:none; }
 nav { background:#ffe6e6; display:flex; justify-content:center; padding:10px; position:sticky; top:0; z-index:1000; }
 nav a { margin:0 12px; text-decoration:none; color:#ff4d6d; font-weight:bold; }
@@ -16,8 +16,8 @@ main { max-width:1000px; margin:30px auto; padding:0 10px; }
 .products { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:20px 0; }
 .product { background:white; border-radius:6px; box-shadow:0 0 6px rgba(0,0,0,0.1); padding:15px; max-width:300px; text-align:center; }
 .product img { max-width:100%; border-radius:6px; }
-.price { font-weight:bold; margin:10px 0; color:#e60039; }
-.btn-azul { padding:8px 12px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; display:inline-block; margin-top:5px; text-decoration:none; color:white; background:#003087; }
+.product p { margin:10px 0; font-weight:bold; color:#e60039; }
+.btn-azul { padding:8px 12px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; display:inline-block; text-decoration:none; color:white; background:#003087; }
 .btn-azul:hover { background:#0050b3; }
 section h2 { text-align:center; color:#e60039; font-size:2em; margin-bottom:20px; }
 footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margin-top:40px; }
@@ -32,8 +32,7 @@ footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margi
 <body>
 
 <header>
-  <!-- Logo na raiz -->
-  <img src="Stylelabs-logo.png" alt="StyleLabs Logo" class="logo">
+  <img src="image/Stylelabs-logo.png" alt="StyleLabs Logo" class="logo">
   <div class="lang-selector">
     <span class="flag" onclick="setLanguage('pt')">🇵🇹</span>
     <span class="flag" onclick="setLanguage('en')">🇬🇧</span>
@@ -55,19 +54,16 @@ footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margi
     <div class="product">
       <img src="image/camiseta1.jpg" alt="Camiseta Estampada">
       <p>Camiseta Estampada</p>
-      <div class="price">€12,99</div>
       <a href="https://shein.com/produto-exemplo1" target="_blank" class="btn-azul">Comprar na SHEIN</a>
     </div>
     <div class="product">
       <img src="image/camiseta2.jpg" alt="Camiseta Básica">
       <p>Camiseta Básica</p>
-      <div class="price">€10,99</div>
       <a href="https://shein.com/produto-exemplo2" target="_blank" class="btn-azul">Comprar na SHEIN</a>
     </div>
     <div class="product">
       <img src="image/camiseta3.jpg" alt="Camiseta Oversized">
       <p>Camiseta Oversized</p>
-      <div class="price">€14,99</div>
       <a href="https://shein.com/produto-exemplo3" target="_blank" class="btn-azul">Comprar na SHEIN</a>
     </div>
   </div>
@@ -79,19 +75,16 @@ footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margi
     <div class="product">
       <img src="image/bone1.jpg" alt="Boné Trendy">
       <p>Boné Trendy</p>
-      <div class="price">€9,99</div>
       <a href="https://shein.com/produto-exemplo4" target="_blank" class="btn-azul">Comprar na SHEIN</a>
     </div>
     <div class="product">
       <img src="image/mochila1.jpg" alt="Mochila Casual">
       <p>Mochila Casual</p>
-      <div class="price">€19,99</div>
       <a href="https://shein.com/produto-exemplo5" target="_blank" class="btn-azul">Comprar na SHEIN</a>
     </div>
     <div class="product">
       <img src="image/relogio1.jpg" alt="Relógio Minimalista">
       <p>Relógio Minimalista</p>
-      <div class="price">€24,99</div>
       <a href="https://shein.com/produto-exemplo6" target="_blank" class="btn-azul">Comprar na SHEIN</a>
     </div>
   </div>
@@ -121,7 +114,7 @@ footer { background:#ff4d6d; color:white; text-align:center; padding:15px; margi
 <script>
 function setLanguage(lang){
   localStorage.setItem('lang', lang);
-  // Aqui podes adicionar traduções se quiser
+  // Aqui podes adicionar traduções PT/EN
 }
 window.onload = function(){ setLanguage(localStorage.getItem('lang')||'pt'); };
 </script>
