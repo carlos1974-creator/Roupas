@@ -50,7 +50,14 @@ section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;
   margin-top:3px;
 }
 
-.suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+/* Botão de sugestões via WhatsApp */
+.suggestions-btn {
+  position:fixed; bottom:20px; right:20px;
+  background:#22d563; color:white;
+  padding:12px 20px; border-radius:50px;
+  text-decoration:none; font-weight:bold;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
 .suggestions-btn:hover {background:#18a74d;}
 footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
 
@@ -64,7 +71,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 <body>
 
 <header>
-  <img src="logo.png" alt="StyleLabs Logo" class="logo" onerror="this.src='fallback-logo.png'">
+  <img src="logo.png" alt="StyleLabs Logo" class="logo">
   <h1>StyleLabs – Roupas e Acessórios</h1>
 </header>
 
@@ -80,7 +87,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 
 <section id="home">
   <h2 style="color:#e65100;">Bem-vindo à StyleLabs</h2>
-  <p>Encontre roupas e acessórios modernos e personalizáveis</p>
+  <p style="text-align:center;">Encontre roupas e acessórios modernos e personalizáveis</p>
 </section>
 
 <section id="produtos">
@@ -129,7 +136,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
   StyleLabs © 2025 — Criado por Carlos Oliveira
 </footer>
 
-<a href="mailto:contacto@stylelabs.pt?subject=Sugestões" class="suggestions-btn">💬 Sugestões / Recomendações</a>
+<a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
 
 <script>
 // Contador de visitas
