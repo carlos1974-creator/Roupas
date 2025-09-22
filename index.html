@@ -2,125 +2,120 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>StyleLabs – Roupas e Acessórios</title>
+  <meta name="description" content="StyleLabs: Roupas e acessórios modernos. Compre facilmente na SHEIN.">
   <style>
     body {margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;}
-    header {background:#ff4d6d;color:white;padding:20px 0;text-align:center;position:relative;}
-    header img.logo {
-      max-height:100px;width:auto;display:block;margin:0 auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2));object-fit:contain;
-    }
-    nav {background:#ffe6e6;display:flex;justify-content:center;padding:10px;}
-    nav a {margin:0 12px;text-decoration:none;color:#ff4d6d;font-weight:bold;}
-    nav a:hover {color:#e60039;}
+    header {background:#008080;color:white;padding:20px 0 50px;text-align:center;}
+    header img {max-height:90px;width:auto;display:block;margin:0 auto 10px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2));}
+    nav {background:#e0e0e0;padding:10px;text-align:center;}
+    nav a {margin:0 12px;text-decoration:none;color:#008080;font-weight:bold;}
+    nav a:hover {color:#e65100;}
     main {max-width:1000px;margin:30px auto;padding:0 10px;}
+    section h2 {text-align:center;color:#e65100;font-size:2em;margin-bottom:20px;}
     .products {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-    .product {
-      background:white;border-radius:6px;box-shadow:0 0 6px rgba(0,0,0,0.1);
-      padding:15px;max-width:300px;text-align:center;
-    }
-    .product img {max-width:100%;border-radius:6px;margin-bottom:10px;object-fit:contain;}
-    .product p {margin:10px 0;font-weight:bold;color:#e60039;}
-    .btn-azul {
-      display:inline-block;padding:8px 12px;border-radius:5px;background:#003087;
-      color:white;text-decoration:none;font-weight:bold;
-    }
-    .btn-azul:hover {background:#0050b3;}
-    section h2 {text-align:center;color:#e60039;font-size:2em;margin-bottom:20px;}
-    footer {background:#ff4d6d;color:white;text-align:center;padding:15px;margin-top:40px;}
-    #contactos {text-align:center;}
-    #contador {margin-top:10px;font-size:0.9em;color:#555;}
-    @media(max-width:768px){
-      nav{flex-direction:column;}
-      nav a{margin:8px 0;}
-      .products{flex-direction:column;align-items:center;}
-    }
+    .product {background:white;border-radius:6px;box-shadow:0 0 6px rgba(0,0,0,0.1);padding:15px;max-width:240px;text-align:center;}
+    .product-name {background:#f3d6f9;color:#c218c2;padding:8px;border-radius:5px;font-weight:bold;margin-bottom:10px;}
+    .btn-buy {display:inline-block;background:#003399;color:white;padding:8px 12px;border-radius:5px;text-decoration:none;font-weight:bold;}
+    .btn-buy:hover {background:#001a66;}
+    .contact-section {text-align:center;margin-top:50px;}
+    .visit-counter {background:#22d563;color:white;padding:10px;font-weight:bold;margin-top:20px;border-radius:5px;display:inline-block;}
+    .suggestions-btn {position:fixed;bottom:20px;right:20px;background:#22d563;color:white;padding:12px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+    .suggestions-btn:hover {background:#18a74d;}
+    @media (max-width:768px){.products{flex-direction:column;align-items:center;}}
   </style>
 </head>
 <body>
 
-<header>
-  <img src="image/Stylelabs-logo.png" alt="StyleLabs Logo" class="logo">
-</header>
+  <header>
+    <img src="images/logo-stylelabs.png" alt="StyleLabs Logo">
+  </header>
 
-<nav>
-  <a href="#camisetas">Camisetas</a>
-  <a href="#acessorios">Acessórios</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#contactos">Contactos</a>
-</nav>
+  <nav>
+    <a href="#home">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-<main>
+  <main>
+    <section id="home">
+      <h2>Bem-vindo à StyleLabs</h2>
+      <p>Encontre roupas e acessórios modernos e compre facilmente na SHEIN.</p>
+    </section>
 
-<section id="camisetas">
-  <h2>Camisetas Populares</h2>
-  <div class="products">
-    <div class="product">
-      <img src="image/camiseta1.jpg" alt="Camiseta Estampada">
-      <p>Camiseta Estampada</p>
-      <a href="https://shein.com/produto-exemplo1" target="_blank" class="btn-azul">Comprar na SHEIN</a>
-    </div>
-    <div class="product">
-      <img src="image/camiseta2.jpg" alt="Camiseta Básica">
-      <p>Camiseta Básica</p>
-      <a href="https://shein.com/produto-exemplo2" target="_blank" class="btn-azul">Comprar na SHEIN</a>
-    </div>
-    <div class="product">
-      <img src="image/camiseta3.jpg" alt="Camiseta Oversized">
-      <p>Camiseta Oversized</p>
-      <a href="https://shein.com/produto-exemplo3" target="_blank" class="btn-azul">Comprar na SHEIN</a>
-    </div>
-  </div>
-</section>
+    <section id="produtos">
+      <h2>🛒 Produtos – SHEIN</h2>
+      <div class="products">
+        <div class="product">
+          <div class="product-name">Camiseta Estampada</div>
+          <a href="https://shein.com" target="_blank" class="btn-buy">Comprar na SHEIN</a>
+        </div>
+        <div class="product">
+          <div class="product-name">Vestido Casual</div>
+          <a href="https://shein.com" target="_blank" class="btn-buy">Comprar na SHEIN</a>
+        </div>
+        <div class="product">
+          <div class="product-name">Calças Jeans</div>
+          <a href="https://shein.com" target="_blank" class="btn-buy">Comprar na SHEIN</a>
+        </div>
+        <div class="product">
+          <div class="product-name">Acessórios Modernos</div>
+          <a href="https://shein.com" target="_blank" class="btn-buy">Comprar na SHEIN</a>
+        </div>
+      </div>
+    </section>
 
-<section id="acessorios">
-  <h2>Acessórios em Alta</h2>
-  <div class="products">
-    <div class="product">
-      <img src="image/bone1.jpg" alt="Boné Trendy">
-      <p>Boné Trendy</p>
-      <a href="https://shein.com/produto-exemplo4" target="_blank" class="btn-azul">Comprar na SHEIN</a>
-    </div>
-    <div class="product">
-      <img src="image/mochila1.jpg" alt="Mochila Casual">
-      <p>Mochila Casual</p>
-      <a href="https://shein.com/produto-exemplo5" target="_blank" class="btn-azul">Comprar na SHEIN</a>
-    </div>
-    <div class="product">
-      <img src="image/relogio1.jpg" alt="Relógio Minimalista">
-      <p>Relógio Minimalista</p>
-      <a href="https://shein.com/produto-exemplo6" target="_blank" class="btn-azul">Comprar na SHEIN</a>
-    </div>
-  </div>
-</section>
+    <section id="contacto" class="contact-section">
+      <h2>📞 Contactos</h2>
+      <p>Fundador: Carlos Oliveira</p>
+      <p>WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></p>
+      <p>Email: contacto@stylelabs.pt</p>
+      <div class="visit-counter" id="visit-counter">Visitas: 0</div>
+    </section>
+  </main>
 
-<section id="sobre">
-  <h2>Sobre a StyleLabs</h2>
-  <p style="text-align:center;">
-    A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios estilosos e acessíveis.
-  </p>
-</section>
+  <footer style="background:#008080;color:white;text-align:center;padding:15px;margin-top:30px;">
+    StyleLabs &copy; 2025 — Criado por Carlos Oliveira
+  </footer>
 
-<section id="contactos">
-  <h2>📞 Contactos</h2>
-  <p>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></p>
-  <p>📧 Email: contacto@stylelabs.pt</p>
-  <div id="contador">Visitas: <span id="visitas">0</span></div>
-</section>
+  <a href="mailto:contacto@stylelabs.pt?subject=Sugestões" class="suggestions-btn">💬 Sugestões / Recomendações</a>
 
-</main>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
 
-<footer>
-  StyleLabs © 2025 — Criado por Carlos Oliveira
-</footer>
+  <script>
+    // 🔧 Substitui pelos dados do teu projeto Firebase
+    const firebaseConfig = {
+      apiKey: "TUA_API_KEY",
+      authDomain: "TUA_AUTH_DOMAIN",
+      databaseURL: "TUA_DATABASE_URL",
+      projectId: "TUA_PROJECT_ID",
+      storageBucket: "TUA_STORAGE_BUCKET",
+      messagingSenderId: "TUA_MESSAGING_SENDER_ID",
+      appId: "TUA_APP_ID"
+    };
 
-<script>
-  // Contador de visitas
-  let visitas = localStorage.getItem('visitasStyleLabs') || 0;
-  visitas++;
-  localStorage.setItem('visitasStyleLabs', visitas);
-  document.getElementById('visitas').textContent = visitas;
-</script>
+    // Inicializar Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Contador global
+    const counter = document.getElementById('visit-counter');
+    const ref = db.ref('stylelabs-visits');
+
+    ref.transaction(current => (current || 0) + 1)
+      .then(() => {
+        ref.once('value', snap => {
+          counter.textContent = 'Visitas: ' + snap.val();
+        });
+      })
+      .catch(err => {
+        console.error('Erro no contador:', err);
+        counter.textContent = 'Visitas: erro';
+      });
+  </script>
 
 </body>
 </html>
