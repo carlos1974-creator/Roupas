@@ -34,7 +34,18 @@ header img.logo {
   font-weight:bold;
   font-size:1em;
   margin-left:8px;
-  display:none;
+}
+
+/* Desktop: mostrar letras, esconder bandeiras */
+@media (min-width: 768px) {
+  .lang-switch img { display: none; }
+  .lang-switch .letters { display: inline; }
+}
+
+/* Telemóvel: mostrar bandeiras, esconder letras */
+@media (max-width: 767px) {
+  .lang-switch img { display: inline; }
+  .lang-switch .letters { display: none; }
 }
 
 /* Animação checkmark piscando */
@@ -53,15 +64,6 @@ header img.logo {
 .texto-verde { color:#28a745; font-weight:bold; }
 
 .lang-switch img:hover { transform:scale(1.1); transition:0.3s; }
-
-@media (min-width: 768px) {
-  .lang-switch img { display:none; }
-  .lang-switch .letters { display:inline; }
-}
-@media (max-width: 767px) {
-  .lang-switch img { display:inline; }
-  .lang-switch .letters { display:none; }
-}
 
 nav {background:#e0e0e0; padding:10px; text-align:center;}
 nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
