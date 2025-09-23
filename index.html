@@ -5,28 +5,160 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StyleLabs – Roupas e Acessórios</title>
 <style>
-body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; color:#333; }
-header { background:#008080; color:white; padding:20px; text-align:center; position:relative; box-shadow:0 3px 6px rgba(0,0,0,0.2);}
-header img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
-.lang-switch { position:absolute; top:15px; right:15px; }
-.lang-switch span { cursor:pointer; font-size:24px; margin-left:10px; }
-nav { background:#e0e0e0; padding:12px; text-align:center; }
-nav a { margin:0 12px; color:#008080; font-weight:bold; text-decoration:none; font-size:1em; }
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color:#333;
+  overflow: hidden; /* remove pontos negros indesejados */
+  position: relative; /* garante que elementos fixos não saiam da página */
+}
+
+header {
+  background:#008080;
+  color:white;
+  padding:20px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 3px 6px rgba(0,0,0,0.2);
+}
+
+header img.logo {
+  width:120px;
+  height:auto;
+  display:block;
+  margin:0 auto 10px;
+  border:4px solid #c218c2;
+  border-radius:12px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
+
+.lang-switch {
+  position:absolute;
+  top:15px;
+  right:15px;
+}
+
+.lang-switch span {
+  cursor:pointer;
+  font-size:24px;
+  margin-left:10px;
+}
+
+nav {
+  background:#e0e0e0;
+  padding:12px;
+  text-align:center;
+}
+
+nav a {
+  margin:0 12px;
+  color:#008080;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:1em;
+}
+
 nav a:hover { color:#e65100; }
-main { max-width:1100px; margin:30px auto; padding:0 15px; }
-section h2 { text-align:center; color:#e65100; font-size:2em; margin-bottom:20px; }
-.products { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
-.product { background:white; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.15); padding:15px; max-width:250px; text-align:center; transition:transform 0.2s;}
-.product:hover { transform:translateY(-5px);}
-.product-name { background:#f3d6f9; color:#c218c2; padding:10px; border-radius:6px; font-weight:bold; margin-bottom:10px; }
-.btn-buy { display:inline-block; background:#003399; color:white; padding:10px 16px; border-radius:8px; font-weight:bold; text-decoration:none; margin-top:10px; }
+
+main {
+  max-width:1100px;
+  margin:30px auto;
+  padding:0 15px;
+}
+
+section h2 {
+  text-align:center;
+  color:#e65100;
+  font-size:2em;
+  margin-bottom:20px;
+}
+
+.products {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.product {
+  background:white;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  padding:15px;
+  max-width:250px;
+  text-align:center;
+  transition:transform 0.2s;
+}
+
+.product:hover { transform:translateY(-5px); }
+
+.product-name {
+  background:#f3d6f9;
+  color:#c218c2;
+  padding:10px;
+  border-radius:6px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.btn-buy {
+  display:inline-block;
+  background:#003399;
+  color:white;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-top:10px;
+}
+
 .btn-buy:hover { background:#001a66; }
+
 .contact-section { text-align:center; margin-top:50px; }
-.visit-counter { background:#22d563; color:white; font-weight:bold; font-size:1.2em; padding:10px 18px; border-radius:15px; display:block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin:25px auto;}
-.suggestions-btn { position:fixed; bottom:25px; right:25px; background:#22d563; color:white; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+
+.contact-section ul { list-style:none; padding:0; }
+.contact-section ul li { margin:8px 0; }
+
+.visit-counter {
+  background:#22d563;
+  color:white;
+  font-weight:bold;
+  font-size:1.2em;
+  padding:10px 18px;
+  border-radius:15px;
+  display:block;
+  text-align:center;
+  box-shadow:0 3px 6px rgba(0,0,0,0.2);
+  margin:25px auto;
+}
+
+.suggestions-btn {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#22d563;
+  color:white;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
 .suggestions-btn:hover { background:#18a74d; }
-footer { text-align:center; padding:18px; background:#008080; color:white; margin-top:40px; box-shadow:0 -3px 6px rgba(0,0,0,0.2);}
-.hidden { display:none; } /* para remover elementos indesejados */
+
+footer {
+  text-align:center;
+  padding:18px;
+  background:#008080;
+  color:white;
+  margin-top:40px;
+  box-shadow:none; /* remove sombra que poderia gerar artefatos */
+}
+
+.hidden { display:none; }
+
 @media (max-width:768px) {
   header img.logo { max-width:100px; }
   .products { flex-direction:column; align-items:center; }
@@ -110,6 +242,7 @@ footer { text-align:center; padding:18px; background:#008080; color:white; margi
   <h2 class="lang" data-key="contactos_title">📞 Contactos</h2>
   <ul>
     <li>👤 Fundador: Carlos Oliveira</li>
+    <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
   </ul>
 </section>
 
