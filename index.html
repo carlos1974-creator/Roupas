@@ -37,24 +37,23 @@ header img.logo {
   display:none;
 }
 
-/* Animação checkmark */
-@keyframes aparecer {
-  0% { opacity:0; transform:translateY(-10px);}
-  100% { opacity:1; transform:translateY(0);}
+/* Animação checkmark piscando */
+@keyframes piscar {
+  0%, 100% { opacity:1; }
+  50% { opacity:0.2; }
 }
-.checkmark-anim {
-  display:inline-block;
-  animation: aparecer 0.8s ease-out;
+.checkmark-blink {
   color:#ffffff;
+  animation: piscar 1s infinite;
+  display:inline-block;
+  margin-right:5px;
 }
 
 /* Texto verde */
 .texto-verde { color:#28a745; font-weight:bold; }
 
-/* Hover bandeiras */
 .lang-switch img:hover { transform:scale(1.1); transition:0.3s; }
 
-/* Mostrar letras no desktop, bandeiras no mobile */
 @media (min-width: 768px) {
   .lang-switch img { display:none; }
   .lang-switch .letters { display:inline; }
@@ -82,7 +81,6 @@ section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;
 .suggestions-btn:hover {background:#18a74d;}
 footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
 
-/* Responsividade */
 @media (max-width:768px) {
   header img.logo { max-width:120px; }
   .products{flex-direction:column; align-items:center;}
@@ -100,7 +98,9 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
     <span class="letters">PT | EN</span>
   </div>
   <h1>StyleLabs – Roupas e Acessórios Personalizáveis</h1>
-  <p class="lang checkmark-anim texto-verde" data-key="clients">✔ Mais de 600 clientes satisfeitos</p>
+  <p class="lang texto-verde" data-key="clients">
+    <span class="checkmark-blink">✔</span> Mais de 600 clientes satisfeitos
+  </p>
 </header>
 
 <nav>
@@ -120,22 +120,62 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 <section id="produtos">
   <h2 class="lang" data-key="produtos_title">🛒 Produtos</h2>
   <div class="products">
+    <!-- 6 Produtos Printful -->
     <div class="product">
-      <div class="product-name lang" data-key="prod1">Camiseta Estampada</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Camiseta+Estampada" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
+      <div class="product-name">Camiseta Estampada</div>
+      <a href="https://www.printful.com/custom/t-shirts" target="_blank" class="btn-buy">Comprar na Printful</a>
     </div>
     <div class="product">
-      <div class="product-name lang" data-key="prod2">Vestido Casual</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Vestido+Casual" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
+      <div class="product-name">Vestido Casual</div>
+      <a href="https://www.printful.com/custom/dresses" target="_blank" class="btn-buy">Comprar na Printful</a>
     </div>
     <div class="product">
-      <div class="product-name lang" data-key="prod3">Calças Jeans</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Calças+Jeans" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
+      <div class="product-name">Calças Jeans</div>
+      <a href="https://www.printful.com/custom/pants" target="_blank" class="btn-buy">Comprar na Printful</a>
     </div>
     <div class="product">
-      <div class="product-name lang" data-key="prod4">Acessórios Modernos</div>
-      <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
+      <div class="product-name">Casaco Moderno</div>
+      <a href="https://www.printful.com/custom/jackets" target="_blank" class="btn-buy">Comprar na Printful</a>
     </div>
+    <div class="product">
+      <div class="product-name">Sweatshirt</div>
+      <a href="https://www.printful.com/custom/sweatshirts" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Boné Estiloso</div>
+      <a href="https://www.printful.com/custom/hats" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+
+    <!-- 6 Produtos Shein -->
+    <div class="product">
+      <div class="product-name">Blusa Feminina</div>
+      <a href="https://www.shein.com/women-tops" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Saia Casual</div>
+      <a href="https://www.shein.com/women-skirts" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Calças Leggings</div>
+      <a href="https://www.shein.com/women-pants" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Vestido Elegante</div>
+      <a href="https://www.shein.com/women-dresses" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Top Trendy</div>
+      <a href="https://www.shein.com/women-tops" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Acessório Fashion</div>
+      <a href="https://www.shein.com/women-accessories" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+  </div>
+
+  <!-- Botão para abrir mais produtos -->
+  <div style="text-align:center; margin:30px 0;">
+    <a href="mais-produtos.html" target="_blank" class="btn-buy">Ver mais produtos</a>
   </div>
 </section>
 
@@ -184,11 +224,6 @@ const translations = {
     home_title: "Welcome to StyleLabs",
     home_text: "Find modern and customizable clothes and accessories",
     produtos_title: "🛒 Products",
-    prod1: "Printed T-Shirt",
-    prod2: "Casual Dress",
-    prod3: "Jeans",
-    prod4: "Modern Accessories",
-    buy: "Buy via WhatsApp",
     sobre_title: "About StyleLabs",
     sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern and customizable clothes and accessories easily and safely.",
     privacidade_title: "Privacy Policy",
@@ -206,11 +241,6 @@ const translations = {
     home_title: "Bem-vindo à StyleLabs",
     home_text: "Encontre roupas e acessórios modernos e personalizáveis",
     produtos_title: "🛒 Produtos",
-    prod1: "Camiseta Estampada",
-    prod2: "Vestido Casual",
-    prod3: "Calças Jeans",
-    prod4: "Acessórios Modernos",
-    buy: "Comprar via WhatsApp",
     sobre_title: "Sobre a StyleLabs",
     sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.",
     privacidade_title: "Política de Privacidade",
