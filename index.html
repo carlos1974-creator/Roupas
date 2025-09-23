@@ -18,7 +18,7 @@ header img.logo {
   box-shadow:0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Bandeiras */
+/* Bandeiras/letras responsivas */
 .lang-switch {
   position:absolute;
   top:10px;
@@ -29,6 +29,39 @@ header img.logo {
   height:auto;
   margin-left:8px;
   cursor:pointer;
+}
+.lang-switch .letters {
+  font-weight:bold;
+  font-size:1em;
+  margin-left:8px;
+  display:none;
+}
+
+/* Animação checkmark */
+@keyframes aparecer {
+  0% { opacity:0; transform:translateY(-10px);}
+  100% { opacity:1; transform:translateY(0);}
+}
+.checkmark-anim {
+  display:inline-block;
+  animation: aparecer 0.8s ease-out;
+  color:#ffffff;
+}
+
+/* Texto verde */
+.texto-verde { color:#28a745; font-weight:bold; }
+
+/* Hover bandeiras */
+.lang-switch img:hover { transform:scale(1.1); transition:0.3s; }
+
+/* Mostrar letras no desktop, bandeiras no mobile */
+@media (min-width: 768px) {
+  .lang-switch img { display:none; }
+  .lang-switch .letters { display:inline; }
+}
+@media (max-width: 767px) {
+  .lang-switch img { display:inline; }
+  .lang-switch .letters { display:none; }
 }
 
 nav {background:#e0e0e0; padding:10px; text-align:center;}
@@ -44,29 +77,8 @@ section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;
 .contact-section {text-align:center; margin-top:50px;}
 .contact-section ul {list-style:none; padding:0; margin:0; text-align:center;}
 .contact-section li {margin:8px 0;}
-
-/* Contador de visitas */
-.visit-counter {
-  background:#22d563;
-  color:white;
-  font-weight:bold;
-  font-size:1.1em;
-  padding:8px 16px;
-  border-radius:12px;
-  display:inline-block;
-  text-align:center;
-  box-shadow:0 3px 6px rgba(0,0,0,0.2);
-  margin-top:20px;
-}
-
-/* Botão de sugestões via WhatsApp */
-.suggestions-btn {
-  position:fixed; bottom:20px; right:20px;
-  background:#22d563; color:white;
-  padding:12px 20px; border-radius:50px;
-  text-decoration:none; font-weight:bold;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
-}
+.visit-counter {background:#22d563; color:white; font-weight:bold; font-size:1.1em; padding:8px 16px; border-radius:12px; display:inline-block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin-top:20px;}
+.suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
 .suggestions-btn:hover {background:#18a74d;}
 footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
 
@@ -85,9 +97,10 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
   <div class="lang-switch">
     <img src="pt.png" alt="Português" id="pt">
     <img src="en.png" alt="English" id="en">
+    <span class="letters">PT | EN</span>
   </div>
   <h1>StyleLabs – Roupas e Acessórios Personalizáveis</h1>
-  <p style="text-align:center; color:#22d563; font-weight:bold; margin-top:5px;" class="lang" data-key="clients">✔ Mais de 600 clientes satisfeitos</p>
+  <p class="lang checkmark-anim texto-verde" data-key="clients">✔ Mais de 600 clientes satisfeitos</p>
 </header>
 
 <nav>
@@ -99,10 +112,9 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 </nav>
 
 <main>
-
 <section id="home">
-  <h2 style="color:#e65100;" class="lang" data-key="home_title">Bem-vindo à StyleLabs</h2>
-  <p style="text-align:center;" class="lang" data-key="home_text">Encontre roupas e acessórios modernos e personalizáveis</p>
+  <h2 class="lang" data-key="home_title" style="color:#e65100;">Bem-vindo à StyleLabs</h2>
+  <p class="lang" data-key="home_text" style="text-align:center;">Encontre roupas e acessórios modernos e personalizáveis</p>
 </section>
 
 <section id="produtos">
