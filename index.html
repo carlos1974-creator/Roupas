@@ -7,64 +7,9 @@
 <style>
 body {margin:0; font-family:Arial,sans-serif; background:#f9f9f9; color:#333;}
 header {background:#008080; color:white; padding:20px; text-align:center; position:relative;}
-header img.logo {
-  width:100%;
-  max-width:180px;
-  height:auto;
-  display:block;
-  margin:0 auto 10px;
-  border:4px solid #c218c2;
-  border-radius:12px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.3);
-}
-
-/* Bandeiras/letras responsivas */
-.lang-switch {
-  position:absolute;
-  top:10px;
-  right:10px;
-}
-.lang-switch img {
-  width:32px;
-  height:auto;
-  margin-left:8px;
-  cursor:pointer;
-}
-.lang-switch .letters {
-  font-weight:bold;
-  font-size:1em;
-  margin-left:8px;
-}
-
-/* Desktop: mostrar letras, esconder bandeiras */
-@media (min-width: 768px) {
-  .lang-switch img { display: none; }
-  .lang-switch .letters { display: inline; }
-}
-
-/* Telemóvel: mostrar bandeiras, esconder letras */
-@media (max-width: 767px) {
-  .lang-switch img { display: inline; }
-  .lang-switch .letters { display: none; }
-}
-
-/* Animação checkmark piscando */
-@keyframes piscar {
-  0%, 100% { opacity:1; }
-  50% { opacity:0.2; }
-}
-.checkmark-blink {
-  color:#ffffff;
-  animation: piscar 1s infinite;
-  display:inline-block;
-  margin-right:5px;
-}
-
-/* Texto verde */
-.texto-verde { color:#28a745; font-weight:bold; }
-
-.lang-switch img:hover { transform:scale(1.1); transition:0.3s; }
-
+header img.logo {width:100%; max-width:180px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+.lang-switch {position:absolute; top:10px; right:10px;}
+.lang-switch img {width:32px; height:auto; margin-left:8px; cursor:pointer;}
 nav {background:#e0e0e0; padding:10px; text-align:center;}
 nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
 nav a:hover {color:#e65100;}
@@ -82,7 +27,6 @@ section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;
 .suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
 .suggestions-btn:hover {background:#18a74d;}
 footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
-
 @media (max-width:768px) {
   header img.logo { max-width:120px; }
   .products{flex-direction:column; align-items:center;}
@@ -97,12 +41,9 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
   <div class="lang-switch">
     <img src="pt.png" alt="Português" id="pt">
     <img src="en.png" alt="English" id="en">
-    <span class="letters">PT | EN</span>
   </div>
   <h1>StyleLabs – Roupas e Acessórios Personalizáveis</h1>
-  <p class="lang texto-verde" data-key="clients">
-    <span class="checkmark-blink">✔</span> Mais de 600 clientes satisfeitos
-  </p>
+  <p style="text-align:center; color:#ffffff; font-weight:bold; margin-top:5px;">✔ Mais de 600 clientes satisfeitos</p>
 </header>
 
 <nav>
@@ -115,69 +56,33 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 
 <main>
 <section id="home">
-  <h2 class="lang" data-key="home_title" style="color:#e65100;">Bem-vindo à StyleLabs</h2>
-  <p class="lang" data-key="home_text" style="text-align:center;">Encontre roupas e acessórios modernos e personalizáveis</p>
+  <h2 style="color:#e65100;" class="lang" data-key="home_title">Bem-vindo à StyleLabs</h2>
+  <p style="text-align:center;" class="lang" data-key="home_text">Encontre roupas e acessórios modernos e personalizáveis</p>
 </section>
 
 <section id="produtos">
   <h2 class="lang" data-key="produtos_title">🛒 Produtos</h2>
   <div class="products">
-    <!-- 6 Produtos Printful -->
+
+    <!-- Produto 1 Shein -->
     <div class="product">
-      <div class="product-name">Camiseta Estampada</div>
-      <a href="https://www.printful.com/custom/t-shirts" target="_blank" class="btn-buy">Comprar na Printful</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Vestido Casual</div>
-      <a href="https://www.printful.com/custom/dresses" target="_blank" class="btn-buy">Comprar na Printful</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Calças Jeans</div>
-      <a href="https://www.printful.com/custom/pants" target="_blank" class="btn-buy">Comprar na Printful</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Casaco Moderno</div>
-      <a href="https://www.printful.com/custom/jackets" target="_blank" class="btn-buy">Comprar na Printful</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Sweatshirt</div>
-      <a href="https://www.printful.com/custom/sweatshirts" target="_blank" class="btn-buy">Comprar na Printful</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Boné Estiloso</div>
-      <a href="https://www.printful.com/custom/hats" target="_blank" class="btn-buy">Comprar na Printful</a>
+      <div class="product-name lang" data-key="prod1">Casaco EMERY ROSE</div>
+      <img src="https://img.ltwebstatic.com/images3_pi/2023/10/10/1696925069f1e3d0d3e4c2b1d3c6d3e5.jpg" alt="Casaco EMERY ROSE" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: 28,87€</p>
+      <a href="https://onelink.shein.com/16/51v2j2vt8gv3" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
-    <!-- 6 Produtos Shein -->
+    <!-- Produto 2 Shein -->
     <div class="product">
-      <div class="product-name">Blusa Feminina</div>
-      <a href="https://www.shein.com/women-tops" target="_blank" class="btn-buy">Comprar na Shein</a>
+      <div class="product-name lang" data-key="prod2">Jaqueta Feminina Manga Longa</div>
+      <img src="https://img.ltwebstatic.com/images3_pi/2023/09/15/1694778923f1e3d0d3e4c2b1d3c6d3e5.jpg" alt="Jaqueta Feminina Manga Longa" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: 28,87€</p>
+      <a href="https://onelink.shein.com/16/51v2om5xm0ck" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
-    <div class="product">
-      <div class="product-name">Saia Casual</div>
-      <a href="https://www.shein.com/women-skirts" target="_blank" class="btn-buy">Comprar na Shein</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Calças Leggings</div>
-      <a href="https://www.shein.com/women-pants" target="_blank" class="btn-buy">Comprar na Shein</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Vestido Elegante</div>
-      <a href="https://www.shein.com/women-dresses" target="_blank" class="btn-buy">Comprar na Shein</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Top Trendy</div>
-      <a href="https://www.shein.com/women-tops" target="_blank" class="btn-buy">Comprar na Shein</a>
-    </div>
-    <div class="product">
-      <div class="product-name">Acessório Fashion</div>
-      <a href="https://www.shein.com/women-accessories" target="_blank" class="btn-buy">Comprar na Shein</a>
-    </div>
+
   </div>
-
-  <!-- Botão para abrir mais produtos -->
-  <div style="text-align:center; margin:30px 0;">
-    <a href="mais-produtos.html" target="_blank" class="btn-buy">Ver mais produtos</a>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="outra-pagina.html" class="btn-buy">Ver mais produtos</a>
   </div>
 </section>
 
@@ -226,13 +131,15 @@ const translations = {
     home_title: "Welcome to StyleLabs",
     home_text: "Find modern and customizable clothes and accessories",
     produtos_title: "🛒 Products",
+    prod1: "EMERY ROSE Coat",
+    prod2: "Long Sleeve Women's Jacket",
+    buy: "Buy on Shein",
     sobre_title: "About StyleLabs",
     sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern and customizable clothes and accessories easily and safely.",
     privacidade_title: "Privacy Policy",
     privacidade_text: "We respect your privacy. All data provided via WhatsApp is used only to process orders and support.",
     contactos_title: "📞 Contacts",
-    footer: "StyleLabs © 2025 — Created by Carlos Oliveira",
-    clients: "✔ Over 600 satisfied customers"
+    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
   },
   pt: {
     nav_home: "Início",
@@ -243,13 +150,15 @@ const translations = {
     home_title: "Bem-vindo à StyleLabs",
     home_text: "Encontre roupas e acessórios modernos e personalizáveis",
     produtos_title: "🛒 Produtos",
+    prod1: "Casaco EMERY ROSE",
+    prod2: "Jaqueta Feminina Manga Longa",
+    buy: "Comprar na Shein",
     sobre_title: "Sobre a StyleLabs",
     sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.",
     privacidade_title: "Política de Privacidade",
     privacidade_text: "Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.",
     contactos_title: "📞 Contactos",
-    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira",
-    clients: "✔ Mais de 600 clientes satisfeitos"
+    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
   }
 };
 
