@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StyleLabs – Roupas e Acessórios</title>
-<style>
-body {margin:0; font-family:Arial,sans-serif; background:#f9f9f9; color:#333;}
-header {background:#008080; color:white; padding:20px; text-align:center; position:relative;}
-header img.logo {width:100%; max-width:180px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
-.lang-switch {position:absolute; top:10px; right:10px;}
-.lang-switch img {width:32px; height:auto; margin-left:8px; cursor:pointer;}
-nav {background:#e0e0e0; padding:10px; text-align:center;}
-nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
-nav a:hover {color:#e65100;}
-main {max-width:1000px; margin:30px auto; padding:0 10px;}
-section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;}
-.products {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
-.product {background:white; border-radius:6px; box-shadow:0 0 6px rgba(0,0,0,0.1); padding:15px; max-width:240px; text-align:center;}
-.product-name {background:#f3d6f9; color:#c218c2; padding:8px; border-radius:5px; font-weight:bold; margin-bottom:10px;}
-.btn-buy {display:inline-block; background:#003399; color:white; padding:8px 12px; border-radius:5px; font-weight:bold; text-decoration:none;}
-.btn-buy:hover {background:#001a66;}
-.contact-section {text-align:center; margin-top:50px;}
-.contact-section ul {list-style:none; padding:0; margin:0; text-align:center;}
-.contact-section li {margin:8px 0;}
-.visit-counter {background:#22d563; color:white; font-weight:bold; font-size:1.1em; padding:8px 16px; border-radius:12px; display:inline-block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin-top:20px;}
-.suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-.suggestions-btn:hover {background:#18a74d;}
-footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
-@media (max-width:768px) {
-  header img.logo { max-width:120px; }
-  .products{flex-direction:column; align-items:center;}
-  .lang-switch {top:5px; right:5px;}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleLabs – Roupas e Acessórios</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; color:#333; }
+    header { background:#008080; color:white; padding:20px; text-align:center; position:relative; box-shadow:0 3px 6px rgba(0,0,0,0.2);}
+    header img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+    .lang-switch { position:absolute; top:15px; right:15px; }
+    .lang-switch span { cursor:pointer; font-size:24px; margin-left:10px; }
+    nav { background:#e0e0e0; padding:12px; text-align:center; }
+    nav a { margin:0 12px; color:#008080; font-weight:bold; text-decoration:none; font-size:1em; }
+    nav a:hover { color:#e65100; }
+    main { max-width:1100px; margin:30px auto; padding:0 15px; }
+    section h2 { text-align:center; color:#e65100; font-size:2em; margin-bottom:20px; }
+    .products { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
+    .product { background:white; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.15); padding:15px; max-width:250px; text-align:center; transition:transform 0.2s;}
+    .product:hover { transform:translateY(-5px);}
+    .product-name { background:#f3d6f9; color:#c218c2; padding:10px; border-radius:6px; font-weight:bold; margin-bottom:10px; }
+    .btn-buy { display:inline-block; background:#003399; color:white; padding:10px 16px; border-radius:8px; font-weight:bold; text-decoration:none; margin-top:10px; }
+    .btn-buy:hover { background:#001a66; }
+    .contact-section { text-align:center; margin-top:50px; }
+    .contact-section ul { list-style:none; padding:0; margin:0; text-align:center; }
+    .contact-section li { margin:8px 0; }
+    .visit-counter { background:#22d563; color:white; font-weight:bold; font-size:1.2em; padding:10px 18px; border-radius:15px; display:inline-block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin-top:25px;}
+    .suggestions-btn { position:fixed; bottom:25px; right:25px; background:#22d563; color:white; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+    .suggestions-btn:hover { background:#18a74d; }
+    footer { text-align:center; padding:18px; background:#008080; color:white; margin-top:40px; box-shadow:0 -3px 6px rgba(0,0,0,0.2);}
+    @media (max-width:768px) {
+      header img.logo { max-width:100px; }
+      .products { flex-direction:column; align-items:center; }
+      .lang-switch { top:10px; right:10px;}
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="StyleLabs Logo" class="logo">
   <div class="lang-switch">
-    <img src="pt.png" alt="Português" id="pt">
-    <img src="en.png" alt="English" id="en">
+    <span id="pt">🇵🇹</span>
+    <span id="en">🇬🇧</span>
   </div>
   <h1>StyleLabs – Roupas e Acessórios</h1>
-  <p style="text-align:center; color:#ffffff; font-weight:bold; margin-top:5px;">✔ Mais de 600 clientes satisfeitos</p>
+  <p style="text-align:center; font-weight:bold; margin-top:5px;">✔ Mais de 600 clientes satisfeitos</p>
 </header>
 
 <nav>
@@ -56,7 +57,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 
 <main>
 <section id="home">
-  <h2 style="color:#e65100;" class="lang" data-key="home_title">Bem-vindo à StyleLabs</h2>
+  <h2 class="lang" data-key="home_title">Bem-vindo à StyleLabs</h2>
   <p style="text-align:center;" class="lang" data-key="home_text">Encontre roupas e acessórios modernos e personalizáveis</p>
 </section>
 
@@ -64,7 +65,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
   <h2 class="lang" data-key="produtos_title">🛒 Produtos</h2>
   <div class="products">
 
-    <!-- Produto 1 – Virtual / Espaço reservado -->
+    <!-- Produto 1 – Virtual / Em Breve -->
     <div class="product">
       <div class="product-name lang" data-key="prod1">Produto em breve</div>
       <p>Preço: --</p>
@@ -75,18 +76,18 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
     <div class="product">
       <div class="product-name lang" data-key="prod2">EMERY ROSE Casaco casual de manga comprida</div>
       <p>Preço: 14,39€</p>
-      <a href="LINK_DE_AFILIADO_PRODUTO2" target="_blank" class="btn-buy">Comprar na Shein</a>
+      <a href="https://onelink.shein.com/16/51v8pridy7nn" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
     <!-- Produto 3 Shein -->
     <div class="product">
       <div class="product-name lang" data-key="prod3">Firla Jaqueta feminina Manga comprida</div>
       <p>Preço: 13,99€</p>
-      <a href="LINK_DE_AFILIADO_PRODUTO3" target="_blank" class="btn-buy">Comprar na Shein</a>
+      <a href="https://onelink.shein.com/16/51v8sk4ym7bi" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
   </div>
-  <div style="text-align:center; margin-top:20px;">
+  <div style="text-align:center; margin-top:25px;">
     <a href="outra-pagina.html" class="btn-buy">Ver mais produtos</a>
   </div>
 </section>
@@ -98,84 +99,43 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 
 <section id="privacidade">
   <h2 class="lang" data-key="privacidade_title">Política de Privacidade</h2>
-  <p class="lang" data-key="privacidade_text">Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.</p>
+  <p class="lang" data-key="privacidade_text">A sua privacidade é importante. Todos os dados coletados são usados apenas para processar pedidos e suporte.</p>
 </section>
 
-<section id="contactos" class="contact-section">
-  <h2 class="lang" data-key="contactos_title">📞 Contactos</h2>
-  <ul>
-    <li>👤 Fundador: Carlos Oliveira</li>
-    <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
-  </ul>
-  <div class="visit-counter">Visitas: <span id="visitas-count">0</span></div>
+<section id="contactos">
+  <h2 class="lang" data-key="contactos_title">Contactos</h2>
+  <div class="contact-section">
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:contato@stylelabs.com">contato@stylelabs.com</a></li>
+      <li><strong>Telefone:</strong> +351 912 345 678</li>
+    </ul>
+  </div>
 </section>
+
+<div class="visit-counter" id="visitCounter">Visitante nº 1</div>
+
+<a href="https://wa.me/351912345678?text=Olá%20StyleLabs,%20tenho%20uma%20sugestão" class="suggestions-btn" target="_blank">💬 Enviar sugestão</a>
 
 <footer>
-  <span class="lang" data-key="footer">StyleLabs © 2025 — Criado por Carlos Oliveira</span>
+  <p>&copy; 2025 StyleLabs. Todos os direitos reservados.</p>
 </footer>
 
-<a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
-
 <script>
-// Contador de visitas
-document.addEventListener('DOMContentLoaded', () => {
-  let visitas = localStorage.getItem('contadorVisitas') || 0;
-  visitas = parseInt(visitas) + 1;
-  localStorage.setItem('contadorVisitas', visitas);
-  document.getElementById('visitas-count').textContent = visitas;
-});
+  // Contador de visitas
+  let visitCount = localStorage.getItem('visitCount') || 0;
+  visitCount++;
+  localStorage.setItem('visitCount', visitCount);
+  document.getElementById('visitCounter').textContent = `Visitante nº ${visitCount}`;
 
-// Tradução bilíngue
-const translations = {
-  en: {
-    nav_home: "Home",
-    nav_produtos: "Products",
-    nav_sobre: "About",
-    nav_privacidade: "Privacy",
-    nav_contactos: "Contacts",
-    home_title: "Welcome to StyleLabs",
-    home_text: "Find modern and customizable clothes and accessories",
-    produtos_title: "🛒 Products",
-    prod1: "Coming Soon",
-    prod2: "EMERY ROSE Casual Long Sleeve Coat",
-    prod3: "Firla Women's Long Sleeve Jacket",
-    sobre_title: "About StyleLabs",
-    sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern and customizable clothes and accessories easily and safely.",
-    privacidade_title: "Privacy Policy",
-    privacidade_text: "We respect your privacy. All data provided via WhatsApp is used only to process orders and support.",
-    contactos_title: "📞 Contacts",
-    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
-  },
-  pt: {
-    nav_home: "Início",
-    nav_produtos: "Produtos",
-    nav_sobre: "Sobre",
-    nav_privacidade: "Privacidade",
-    nav_contactos: "Contactos",
-    home_title: "Bem-vindo à StyleLabs",
-    home_text: "Encontre roupas e acessórios modernos e personalizáveis",
-    produtos_title: "🛒 Produtos",
-    prod1: "Produto em breve",
-    prod2: "EMERY ROSE Casaco casual de manga comprida",
-    prod3: "Firla Jaqueta feminina Manga comprida",
-    sobre_title: "Sobre a StyleLabs",
-    sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.",
-    privacidade_title: "Política de Privacidade",
-    privacidade_text: "Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.",
-    contactos_title: "📞 Contactos",
-    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
-  }
-};
-
-document.getElementById('en').addEventListener('click', () => setLanguage('en'));
-document.getElementById('pt').addEventListener('click', () => setLanguage('pt'));
-
-function setLanguage(lang) {
-  document.querySelectorAll('.lang').forEach(el => {
-    const key = el.getAttribute('data-key');
-    if(translations[lang][key]) el.textContent = translations[lang][key];
+  // Alternar idiomas (simples)
+  document.getElementById('pt').addEventListener('click', () => {
+    document.documentElement.lang = 'pt';
+    alert('Idioma alterado para Português');
   });
-}
+  document.getElementById('en').addEventListener('click', () => {
+    document.documentElement.lang = 'en';
+    alert('Language changed to English');
+  });
 </script>
 
 </body>
