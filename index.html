@@ -7,9 +7,30 @@
 <style>
 body {margin:0; font-family:Arial,sans-serif; background:#f9f9f9; color:#333;}
 header {background:#008080; color:white; padding:20px; text-align:center; position:relative;}
-header img.logo {width:100%; max-width:180px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
-.lang-switch {position:absolute; top:10px; right:10px;}
-.lang-switch img {width:32px; height:auto; margin-left:8px; cursor:pointer;}
+header img.logo {
+  width:100%;
+  max-width:180px;
+  height:auto;
+  display:block;
+  margin:0 auto 10px;
+  border:4px solid #c218c2;
+  border-radius:12px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Bandeiras */
+.lang-switch {
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+.lang-switch img {
+  width:32px;
+  height:auto;
+  margin-left:8px;
+  cursor:pointer;
+}
+
 nav {background:#e0e0e0; padding:10px; text-align:center;}
 nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
 nav a:hover {color:#e65100;}
@@ -23,10 +44,33 @@ section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;
 .contact-section {text-align:center; margin-top:50px;}
 .contact-section ul {list-style:none; padding:0; margin:0; text-align:center;}
 .contact-section li {margin:8px 0;}
-.visit-counter {background:#22d563; color:white; font-weight:bold; font-size:1.1em; padding:8px 16px; border-radius:12px; display:inline-block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin-top:20px;}
-.suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+
+/* Contador de visitas */
+.visit-counter {
+  background:#22d563;
+  color:white;
+  font-weight:bold;
+  font-size:1.1em;
+  padding:8px 16px;
+  border-radius:12px;
+  display:inline-block;
+  text-align:center;
+  box-shadow:0 3px 6px rgba(0,0,0,0.2);
+  margin-top:20px;
+}
+
+/* Botão de sugestões via WhatsApp */
+.suggestions-btn {
+  position:fixed; bottom:20px; right:20px;
+  background:#22d563; color:white;
+  padding:12px 20px; border-radius:50px;
+  text-decoration:none; font-weight:bold;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
 .suggestions-btn:hover {background:#18a74d;}
 footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
+
+/* Responsividade */
 @media (max-width:768px) {
   header img.logo { max-width:120px; }
   .products{flex-direction:column; align-items:center;}
@@ -43,7 +87,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
     <img src="en.png" alt="English" id="en">
   </div>
   <h1>StyleLabs – Roupas e Acessórios Personalizáveis</h1>
-  <p style="text-align:center; color:#ffffff; font-weight:bold; margin-top:5px;">✔ Mais de 600 clientes satisfeitos</p>
+  <p style="text-align:center; color:#22d563; font-weight:bold; margin-top:5px;" class="lang" data-key="clients">✔ Mais de 600 clientes satisfeitos</p>
 </header>
 
 <nav>
@@ -55,6 +99,7 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 </nav>
 
 <main>
+
 <section id="home">
   <h2 style="color:#e65100;" class="lang" data-key="home_title">Bem-vindo à StyleLabs</h2>
   <p style="text-align:center;" class="lang" data-key="home_text">Encontre roupas e acessórios modernos e personalizáveis</p>
@@ -79,9 +124,6 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
       <div class="product-name lang" data-key="prod4">Acessórios Modernos</div>
       <a href="https://wa.me/351928332158?text=Quero+comprar+Acessórios+Modernos" target="_blank" class="btn-buy lang" data-key="buy">Comprar via WhatsApp</a>
     </div>
-  </div>
-  <div style="text-align:center; margin-top:20px;">
-    <a href="outra-pagina.html" class="btn-buy">Ver mais produtos</a>
   </div>
 </section>
 
@@ -140,7 +182,8 @@ const translations = {
     privacidade_title: "Privacy Policy",
     privacidade_text: "We respect your privacy. All data provided via WhatsApp is used only to process orders and support.",
     contactos_title: "📞 Contacts",
-    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
+    footer: "StyleLabs © 2025 — Created by Carlos Oliveira",
+    clients: "✔ Over 600 satisfied customers"
   },
   pt: {
     nav_home: "Início",
@@ -161,7 +204,8 @@ const translations = {
     privacidade_title: "Política de Privacidade",
     privacidade_text: "Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.",
     contactos_title: "📞 Contactos",
-    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
+    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira",
+    clients: "✔ Mais de 600 clientes satisfeitos"
   }
 };
 
@@ -171,7 +215,7 @@ document.getElementById('pt').addEventListener('click', () => setLanguage('pt'))
 function setLanguage(lang) {
   document.querySelectorAll('.lang').forEach(el => {
     const key = el.getAttribute('data-key');
-    el.textContent = translations[lang][key];
+    if(translations[lang][key]) el.textContent = translations[lang][key];
   });
 }
 </script>
