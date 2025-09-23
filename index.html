@@ -122,8 +122,6 @@ footer { text-align:center; padding:18px; background:#008080; color:white; margi
       <p>Preço: 19,99€</p>
       <a href="https://onelink.shein.com/16/51vm3kv34km6" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
-
-    <!-- Outros produtos aqui... -->
   </div>
 
   <div style="text-align:center; margin-top:25px;">
@@ -154,7 +152,7 @@ footer { text-align:center; padding:18px; background:#008080; color:white; margi
 <a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
 
 <!-- AdSense Rodapé -->
-<div style="text-align:center; margin-top:15px;">
+<div style="text-align:center; margin:15px 0;">
   <ins class="adsbygoogle"
        style="display:block"
        data-ad-client="ca-pub-3875462679161698"
@@ -175,8 +173,52 @@ localStorage.setItem('visitCount', visitCount);
 document.getElementById('visitCounter').textContent = `Visitas: ${visitCount}`;
 
 const translations = {
-  en: { /* traduções Inglês */ },
-  pt: { /* traduções Português */ }
+  en: {
+    header_title: "StyleLabs – Clothes & Accessories",
+    satisfied: "Over 600 satisfied customers",
+    nav_home: "Home",
+    nav_produtos: "Products",
+    nav_sobre: "About",
+    nav_privacidade: "Privacy",
+    nav_contactos: "Contacts",
+    home_title: "Welcome to StyleLabs",
+    home_text: "Find modern clothes and accessories",
+    produtos_title: "🛒 Products",
+    prod1: "Coming Soon",
+    prod2: "EMERY ROSE Long Sleeve Casual Jacket",
+    prod3: "Firla Long Sleeve Women's Jacket",
+    prod6: "Thermal Lunch Bag, Waterproof",
+    ver_mais: "See more products",
+    sobre_title: "About StyleLabs",
+    sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern clothes and accessories easily and safely.",
+    privacidade_title: "Privacy Policy",
+    privacidade_text: "Your privacy is important. All collected data is used only to process orders and support.",
+    contactos_title: "📞 Contacts",
+    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
+  },
+  pt: {
+    header_title: "StyleLabs – Roupas e Acessórios",
+    satisfied: "Mais de 600 clientes satisfeitos",
+    nav_home: "Início",
+    nav_produtos: "Produtos",
+    nav_sobre: "Sobre",
+    nav_privacidade: "Privacidade",
+    nav_contactos: "Contactos",
+    home_title: "Bem-vindo à StyleLabs",
+    home_text: "Encontre roupas e acessórios modernos",
+    produtos_title: "🛒 Produtos",
+    prod1: "Produto em breve",
+    prod2: "EMERY ROSE Casaco casual de manga comprida",
+    prod3: "Firla Jaqueta feminina Manga comprida",
+    prod6: "Bolsa Térmica para Almoço, à Prova d'Água",
+    ver_mais: "Ver mais produtos",
+    sobre_title: "Sobre a StyleLabs",
+    sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos de forma prática e segura.",
+    privacidade_title: "Política de Privacidade",
+    privacidade_text: "A sua privacidade é importante. Todos os dados coletados são usados apenas para processar pedidos e suporte.",
+    contactos_title: "📞 Contactos",
+    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
+  }
 };
 
 function setLanguage(lang) {
@@ -189,7 +231,6 @@ function setLanguage(lang) {
 
 document.getElementById('pt').addEventListener('click', () => setLanguage('pt'));
 document.getElementById('en').addEventListener('click', () => setLanguage('en'));
-setLanguage('pt');
 </script>
 
 </body>
