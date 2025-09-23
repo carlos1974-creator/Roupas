@@ -23,13 +23,10 @@ header img.logo {
   position:absolute;
   top:10px;
   right:10px;
-}
-.lang-switch img {
-  width:32px;
-  height:auto;
-  margin-left:8px;
+  font-size:24px;
   cursor:pointer;
 }
+.lang-switch span { margin-left:8px; }
 
 nav {background:#e0e0e0; padding:10px; text-align:center;}
 nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
@@ -83,8 +80,8 @@ footer {text-align:center; padding:15px; background:#008080; color:white; margin
 <header>
   <img src="logo.png" alt="StyleLabs Logo" class="logo">
   <div class="lang-switch">
-    <img src="pt.png" alt="Português" id="pt">
-    <img src="en.png" alt="English" id="en">
+    <span id="pt">🇵🇹</span>
+    <span id="en">🇬🇧</span>
   </div>
   <h1>StyleLabs – Roupas e Acessórios</h1>
   <p style="text-align:center; color:#ffffff; font-weight:bold; margin-top:5px;">✔ Mais de 500 clientes satisfeitos</p>
@@ -213,7 +210,9 @@ document.getElementById('pt').addEventListener('click', () => setLanguage('pt'))
 function setLanguage(lang) {
   document.querySelectorAll('.lang').forEach(el => {
     const key = el.getAttribute('data-key');
-    el.textContent = translations[lang][key];
+    if(translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
   });
 }
 </script>
