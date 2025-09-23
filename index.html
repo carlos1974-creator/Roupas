@@ -5,16 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StyleLabs – Roupas e Acessórios</title>
 <style>
-/* ===== BODY E GERAL ===== */
 body {
   margin:0;
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   color:#333;
-  position: relative; /* mantém elementos fixos posicionados */
-  /* overflow: hidden; REMOVIDO para permitir scroll completo */
+  position: relative;
 }
-
 header {
   background:#008080;
   color:white;
@@ -23,7 +20,6 @@ header {
   position:relative;
   box-shadow:0 3px 6px rgba(0,0,0,0.2);
 }
-
 header img.logo {
   width:120px;
   height:auto;
@@ -33,25 +29,21 @@ header img.logo {
   border-radius:12px;
   box-shadow:0 4px 8px rgba(0,0,0,0.3);
 }
-
 .lang-switch {
   position:absolute;
   top:15px;
   right:15px;
 }
-
 .lang-switch span {
   cursor:pointer;
   font-size:24px;
   margin-left:10px;
 }
-
 nav {
   background:#e0e0e0;
   padding:12px;
   text-align:center;
 }
-
 nav a {
   margin:0 12px;
   color:#008080;
@@ -59,29 +51,24 @@ nav a {
   text-decoration:none;
   font-size:1em;
 }
-
 nav a:hover { color:#e65100; }
-
 main {
   max-width:1100px;
   margin:30px auto;
   padding:0 15px;
 }
-
 section h2 {
   text-align:center;
   color:#e65100;
   font-size:2em;
   margin-bottom:20px;
 }
-
 .products {
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap:25px;
 }
-
 .product {
   background:white;
   border-radius:10px;
@@ -91,9 +78,7 @@ section h2 {
   text-align:center;
   transition:transform 0.2s;
 }
-
 .product:hover { transform:translateY(-5px); }
-
 .product-name {
   background:#f3d6f9;
   color:#c218c2;
@@ -102,7 +87,6 @@ section h2 {
   font-weight:bold;
   margin-bottom:10px;
 }
-
 .btn-buy {
   display:inline-block;
   background:#003399;
@@ -113,14 +97,10 @@ section h2 {
   text-decoration:none;
   margin-top:10px;
 }
-
 .btn-buy:hover { background:#001a66; }
-
 .contact-section { text-align:center; margin-top:50px; }
-
 .contact-section ul { list-style:none; padding:0; }
 .contact-section ul li { margin:8px 0; }
-
 .visit-counter {
   background:#22d563;
   color:white;
@@ -133,7 +113,6 @@ section h2 {
   box-shadow:0 3px 6px rgba(0,0,0,0.2);
   margin:25px auto;
 }
-
 .suggestions-btn {
   position:fixed;
   bottom:25px;
@@ -146,20 +125,16 @@ section h2 {
   font-weight:bold;
   box-shadow:0 2px 6px rgba(0,0,0,0.2);
 }
-
 .suggestions-btn:hover { background:#18a74d; }
-
 footer {
   text-align:center;
   padding:18px;
   background:#008080;
   color:white;
   margin-top:40px;
-  box-shadow:none; /* remove sombra que poderia gerar ponto negro */
+  box-shadow:none;
 }
-
 .hidden { display:none; }
-
 @media (max-width:768px) {
   header img.logo { max-width:100px; }
   .products { flex-direction:column; align-items:center; }
@@ -209,16 +184,16 @@ footer {
 
     <!-- Produto 2 Shein -->
     <div class="product">
-      <div class="product-name lang" data-key="prod2">EMERY ROSE Casaco casual de manga comprida</div>
-      <img src="img/emery-rose.jpg" alt="EMERY ROSE Casaco" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <div class="product-name lang" data-key="prod2">EMERY ROSE Casaco casual de manga</div>
+      <img src="emery-rose.jpg" alt="EMERY ROSE Casaco casual de manga" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: 14,39€</p>
       <a href="https://onelink.shein.com/16/51vcxow25lw7" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
     <!-- Produto 3 Shein -->
     <div class="product">
-      <div class="product-name lang" data-key="prod3">Firla Jaqueta feminina Manga comprida</div>
-      <img src="img/firla-jaqueta.jpg" alt="Firla Jaqueta" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <div class="product-name lang" data-key="prod3">Firla Jaqueta feminina Manga compr</div>
+      <img src="firla-jaqueta.jpg" alt="Firla Jaqueta feminina Manga compr" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: 13,99€</p>
       <a href="https://onelink.shein.com/16/51v8pridy7nn" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
@@ -226,7 +201,7 @@ footer {
     <!-- Produto 4 Placeholder -->
     <div class="product">
       <div class="product-name lang" data-key="prod4">Produto em breve</div>
-      <img src="img/placeholder.png" alt="Produto em breve" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <img src="placeholder.png" alt="Produto em breve" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: --</p>
       <a href="#" class="btn-buy" style="pointer-events:none; opacity:0.5;">Em breve</a>
     </div>
@@ -234,7 +209,7 @@ footer {
     <!-- Produto 5 Placeholder -->
     <div class="product">
       <div class="product-name lang" data-key="prod5">Produto em breve</div>
-      <img src="img/placeholder.png" alt="Produto em breve" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <img src="placeholder.png" alt="Produto em breve" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: --</p>
       <a href="#" class="btn-buy" style="pointer-events:none; opacity:0.5;">Em breve</a>
     </div>
@@ -272,13 +247,13 @@ footer {
 </footer>
 
 <script>
-/* ===== Contador de visitas ===== */
+/* Contador de visitas */
 let visitCount = localStorage.getItem('visitCount') || 0;
 visitCount++;
 localStorage.setItem('visitCount', visitCount);
 document.getElementById('visitCounter').textContent = `Visitas: ${visitCount}`;
 
-/* ===== Idiomas PT/EN ===== */
+/* Idiomas PT/EN */
 const translations = {
   en: {
     header_title: "StyleLabs – Clothes & Accessories",
@@ -316,8 +291,8 @@ const translations = {
     home_text: "Encontre roupas e acessórios modernos",
     produtos_title: "🛒 Produtos",
     prod1: "Produto em breve",
-    prod2: "EMERY ROSE Casaco casual de manga comprida",
-    prod3: "Firla Jaqueta feminina Manga comprida",
+    prod2: "EMERY ROSE Casaco casual de manga",
+    prod3: "Firla Jaqueta feminina Manga compr",
     prod4: "Produto em breve",
     prod5: "Produto em breve",
     ver_mais: "Ver mais produtos",
