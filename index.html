@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StyleLabs – Roupas e Acessórios</title>
 <style>
+/* ===== BODY E GERAL ===== */
 body {
   margin:0;
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   color:#333;
-  overflow: hidden; /* remove pontos negros indesejados */
-  position: relative; /* garante que elementos fixos não saiam da página */
+  overflow: hidden;
+  position: relative;
 }
 
 header {
@@ -154,7 +155,7 @@ footer {
   background:#008080;
   color:white;
   margin-top:40px;
-  box-shadow:none; /* remove sombra que poderia gerar artefatos */
+  box-shadow:none;
 }
 
 .hidden { display:none; }
@@ -174,10 +175,10 @@ footer {
     <span id="pt">🇵🇹</span>
     <span id="en">🇬🇧</span>
   </div>
-  <h1>StyleLabs – Roupas e Acessórios</h1>
+  <h1 class="lang" data-key="header_title">StyleLabs – Roupas e Acessórios</h1>
   <p style="text-align:center; font-weight:bold; margin-top:5px;">
     <span style="color:white;">✔</span>
-    <span style="color:#22d563;">Mais de 600 clientes satisfeitos</span>
+    <span style="color:#22d563;" class="lang" data-key="satisfied">Mais de 600 clientes satisfeitos</span>
   </p>
 </header>
 
@@ -199,7 +200,7 @@ footer {
   <h2 class="lang" data-key="produtos_title">🛒 Produtos</h2>
   <div class="products">
 
-    <!-- Produto 1 – Virtual / Em Breve -->
+    <!-- Produto 1 – Em Breve -->
     <div class="product">
       <div class="product-name lang" data-key="prod1">Produto em breve</div>
       <p>Preço: --</p>
@@ -222,9 +223,25 @@ footer {
       <a href="https://onelink.shein.com/16/51v8pridy7nn" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
+    <!-- Produto 4 Placeholder -->
+    <div class="product">
+      <div class="product-name lang" data-key="prod4">Produto em breve</div>
+      <img src="img/placeholder.png" alt="Produto em breve" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: --</p>
+      <a href="#" class="btn-buy" style="pointer-events:none; opacity:0.5;">Em breve</a>
+    </div>
+
+    <!-- Produto 5 Placeholder -->
+    <div class="product">
+      <div class="product-name lang" data-key="prod5">Produto em breve</div>
+      <img src="img/placeholder.png" alt="Produto em breve" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: --</p>
+      <a href="#" class="btn-buy" style="pointer-events:none; opacity:0.5;">Em breve</a>
+    </div>
+
   </div>
   <div style="text-align:center; margin-top:25px;">
-    <a href="outra-pagina.html" class="btn-buy">Ver mais produtos</a>
+    <a href="outra-pagina.html" class="btn-buy lang" data-key="ver_mais">Ver mais produtos</a>
   </div>
 </section>
 
@@ -255,19 +272,74 @@ footer {
 </footer>
 
 <script>
-  // Contador de visitas centrado
-  let visitCount = localStorage.getItem('visitCount') || 0;
-  visitCount++;
-  localStorage.setItem('visitCount', visitCount);
-  document.getElementById('visitCounter').textContent = `Visitas: ${visitCount}`;
+/* ===== Contador de visitas ===== */
+let visitCount = localStorage.getItem('visitCount') || 0;
+visitCount++;
+localStorage.setItem('visitCount', visitCount);
+document.getElementById('visitCounter').textContent = `Visitas: ${visitCount}`;
 
-  // Alternar idiomas simples
-  document.getElementById('pt').addEventListener('click', () => {
-    document.documentElement.lang = 'pt';
+/* ===== Idiomas PT/EN ===== */
+const translations = {
+  en: {
+    header_title: "StyleLabs – Clothes & Accessories",
+    satisfied: "Over 600 satisfied customers",
+    nav_home: "Home",
+    nav_produtos: "Products",
+    nav_sobre: "About",
+    nav_privacidade: "Privacy",
+    nav_contactos: "Contacts",
+    home_title: "Welcome to StyleLabs",
+    home_text: "Find modern clothes and accessories",
+    produtos_title: "🛒 Products",
+    prod1: "Coming Soon",
+    prod2: "EMERY ROSE Long Sleeve Casual Jacket",
+    prod3: "Firla Long Sleeve Women's Jacket",
+    prod4: "Coming Soon",
+    prod5: "Coming Soon",
+    ver_mais: "See more products",
+    sobre_title: "About StyleLabs",
+    sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern clothes and accessories easily and safely.",
+    privacidade_title: "Privacy Policy",
+    privacidade_text: "Your privacy is important. All collected data is used only to process orders and support.",
+    contactos_title: "📞 Contacts",
+    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
+  },
+  pt: {
+    header_title: "StyleLabs – Roupas e Acessórios",
+    satisfied: "Mais de 600 clientes satisfeitos",
+    nav_home: "Início",
+    nav_produtos: "Produtos",
+    nav_sobre: "Sobre",
+    nav_privacidade: "Privacidade",
+    nav_contactos: "Contactos",
+    home_title: "Bem-vindo à StyleLabs",
+    home_text: "Encontre roupas e acessórios modernos",
+    produtos_title: "🛒 Produtos",
+    prod1: "Produto em breve",
+    prod2: "EMERY ROSE Casaco casual de manga comprida",
+    prod3: "Firla Jaqueta feminina Manga comprida",
+    prod4: "Produto em breve",
+    prod5: "Produto em breve",
+    ver_mais: "Ver mais produtos",
+    sobre_title: "Sobre a StyleLabs",
+    sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos de forma prática e segura.",
+    privacidade_title: "Política de Privacidade",
+    privacidade_text: "A sua privacidade é importante. Todos os dados coletados são usados apenas para processar pedidos e suporte.",
+    contactos_title: "📞 Contactos",
+    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
+  }
+};
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang').forEach(el => {
+    const key = el.dataset.key;
+    if(key && translations[lang][key]) el.textContent = translations[lang][key];
   });
-  document.getElementById('en').addEventListener('click', () => {
-    document.documentElement.lang = 'en';
-  });
+}
+
+document.getElementById('pt').addEventListener('click', () => setLanguage('pt'));
+document.getElementById('en').addEventListener('click', () => setLanguage('en'));
 </script>
 
 </body>
