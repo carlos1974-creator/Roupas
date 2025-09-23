@@ -3,88 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StyleLabs – Produtos Shein</title>
+<title>StyleLabs – Roupas e Acessórios Personalizáveis</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 20px;
-  }
-  h1 {
-    text-align: center;
-    color: #6a1b9a;
-  }
-  .produtos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-  }
-  .produto {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    width: 250px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  .produto img {
-    max-width: 100%;
-    border-radius: 5px;
-  }
-  .produto h3 {
-    color: #333;
-    margin: 10px 0;
-  }
-  .produto p {
-    color: #666;
-    margin: 5px 0 15px 0;
-  }
-  .botao-comprar {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6a1b9a;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  .botao-comprar:hover {
-    background-color: #4a148c;
-  }
+body {margin:0; font-family:Arial,sans-serif; background:#f9f9f9; color:#333;}
+header {background:#008080; color:white; padding:20px; text-align:center; position:relative;}
+header img.logo {
+  width:100%;
+  max-width:180px;
+  height:auto;
+  display:block;
+  margin:0 auto 10px;
+  border:4px solid #c218c2;
+  border-radius:12px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Bandeiras/letras responsivas */
+.lang-switch {
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+.lang-switch img {
+  width:32px;
+  height:auto;
+  margin-left:8px;
+  cursor:pointer;
+}
+.lang-switch .letters {
+  font-weight:bold;
+  font-size:1em;
+  margin-left:8px;
+}
+
+/* Desktop: mostrar letras, esconder bandeiras */
+@media (min-width: 768px) {
+  .lang-switch img { display: none; }
+  .lang-switch .letters { display: inline; }
+}
+
+/* Telemóvel: mostrar bandeiras, esconder letras */
+@media (max-width: 767px) {
+  .lang-switch img { display: inline; }
+  .lang-switch .letters { display: none; }
+}
+
+/* Animação checkmark piscando */
+@keyframes piscar {
+  0%, 100% { opacity:1; }
+  50% { opacity:0.2; }
+}
+.checkmark-blink {
+  color:#ffffff;
+  animation: piscar 1s infinite;
+  display:inline-block;
+  margin-right:5px;
+}
+
+/* Texto verde */
+.texto-verde { color:#28a745; font-weight:bold; }
+
+.lang-switch img:hover { transform:scale(1.1); transition:0.3s; }
+
+nav {background:#e0e0e0; padding:10px; text-align:center;}
+nav a {margin:0 12px; color:#008080; font-weight:bold; text-decoration:none;}
+nav a:hover {color:#e65100;}
+main {max-width:1000px; margin:30px auto; padding:0 10px;}
+section h2 {text-align:center; color:#e65100; font-size:2em; margin-bottom:20px;}
+.products {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
+.product {background:white; border-radius:6px; box-shadow:0 0 6px rgba(0,0,0,0.1); padding:15px; max-width:240px; text-align:center;}
+.product-name {background:#f3d6f9; color:#c218c2; padding:8px; border-radius:5px; font-weight:bold; margin-bottom:10px;}
+.btn-buy {display:inline-block; background:#003399; color:white; padding:8px 12px; border-radius:5px; font-weight:bold; text-decoration:none;}
+.btn-buy:hover {background:#001a66;}
+.contact-section {text-align:center; margin-top:50px;}
+.contact-section ul {list-style:none; padding:0; margin:0; text-align:center;}
+.contact-section li {margin:8px 0;}
+.visit-counter {background:#22d563; color:white; font-weight:bold; font-size:1.1em; padding:8px 16px; border-radius:12px; display:inline-block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin-top:20px;}
+.suggestions-btn {position:fixed; bottom:20px; right:20px; background:#22d563; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.suggestions-btn:hover {background:#18a74d;}
+footer {text-align:center; padding:15px; background:#008080; color:white; margin-top:40px;}
+
+@media (max-width:768px) {
+  header img.logo { max-width:120px; }
+  .products{flex-direction:column; align-items:center;}
+  .lang-switch {top:5px; right:5px;}
+}
 </style>
 </head>
 <body>
 
-<h1>Produtos Shein no StyleLabs</h1>
+<header>
+  <img src="logo.png" alt="StyleLabs Logo" class="logo">
+  <div class="lang-switch">
+    <img src="pt.png" alt="Português" id="pt">
+    <img src="en.png" alt="English" id="en">
+    <span class="letters">PT | EN</span>
+  </div>
+  <h1>StyleLabs – Roupas e Acessórios Personalizáveis</h1>
+  <p class="lang texto-verde" data-key="clients">
+    <span class="checkmark-blink">✔</span> Mais de 600 clientes satisfeitos
+  </p>
+</header>
 
-<div class="produtos">
-  <!-- Produto 1 -->
-  <div class="produto">
-    <img src="https://example.com/camiseta1.jpg" alt="Camiseta Trendy">
-    <h3>Camiseta Trendy</h3>
-    <p>Preço: 15€</p>
-    <a href="LINK_DO_PRODUTO_SHEIN1" target="_blank" class="botao-comprar">Comprar na Shein</a>
+<nav>
+  <a href="#home" class="lang" data-key="nav_home">Início</a>
+  <a href="#produtos" class="lang" data-key="nav_produtos">Produtos</a>
+  <a href="#sobre" class="lang" data-key="nav_sobre">Sobre</a>
+  <a href="#privacidade" class="lang" data-key="nav_privacidade">Privacidade</a>
+  <a href="#contactos" class="lang" data-key="nav_contactos">Contactos</a>
+</nav>
+
+<main>
+<section id="home">
+  <h2 class="lang" data-key="home_title" style="color:#e65100;">Bem-vindo à StyleLabs</h2>
+  <p class="lang" data-key="home_text" style="text-align:center;">Encontre roupas e acessórios modernos e personalizáveis</p>
+</section>
+
+<section id="produtos">
+  <h2 class="lang" data-key="produtos_title">🛒 Produtos</h2>
+  <div class="products">
+    <!-- 6 Produtos Printful -->
+    <div class="product">
+      <div class="product-name">Camiseta Estampada</div>
+      <a href="https://www.printful.com/custom/t-shirts" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Vestido Casual</div>
+      <a href="https://www.printful.com/custom/dresses" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Calças Jeans</div>
+      <a href="https://www.printful.com/custom/pants" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Casaco Moderno</div>
+      <a href="https://www.printful.com/custom/jackets" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Sweatshirt</div>
+      <a href="https://www.printful.com/custom/sweatshirts" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Boné Estiloso</div>
+      <a href="https://www.printful.com/custom/hats" target="_blank" class="btn-buy">Comprar na Printful</a>
+    </div>
+
+    <!-- 6 Produtos Shein -->
+    <div class="product">
+      <div class="product-name">Blusa Feminina</div>
+      <a href="https://www.shein.com/women-tops" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Saia Casual</div>
+      <a href="https://www.shein.com/women-skirts" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Calças Leggings</div>
+      <a href="https://www.shein.com/women-pants" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Vestido Elegante</div>
+      <a href="https://www.shein.com/women-dresses" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Top Trendy</div>
+      <a href="https://www.shein.com/women-tops" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+    <div class="product">
+      <div class="product-name">Acessório Fashion</div>
+      <a href="https://www.shein.com/women-accessories" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
   </div>
 
-  <!-- Produto 2 -->
-  <div class="produto">
-    <img src="https://example.com/camiseta2.jpg" alt="Blusa Fashion">
-    <h3>Blusa Fashion</h3>
-    <p>Preço: 20€</p>
-    <a href="LINK_DO_PRODUTO_SHEIN2" target="_blank" class="botao-comprar">Comprar na Shein</a>
+  <!-- Botão para abrir mais produtos -->
+  <div style="text-align:center; margin:30px 0;">
+    <a href="mais-produtos.html" target="_blank" class="btn-buy">Ver mais produtos</a>
   </div>
+</section>
 
-  <!-- Produto 3 -->
-  <div class="produto">
-    <img src="https://example.com/acessorio.jpg" alt="Acessório Moderno">
-    <h3>Acessório Moderno</h3>
-    <p>Preço: 10€</p>
-    <a href="LINK_DO_PRODUTO_SHEIN3" target="_blank" class="botao-comprar">Comprar na Shein</a>
-  </div>
-</div>
+<section id="sobre">
+  <h2 class="lang" data-key="sobre_title">Sobre a StyleLabs</h2>
+  <p class="lang" data-key="sobre_text">A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.</p>
+</section>
+
+<section id="privacidade">
+  <h2 class="lang" data-key="privacidade_title">Política de Privacidade</h2>
+  <p class="lang" data-key="privacidade_text">Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.</p>
+</section>
+
+<section id="contactos" class="contact-section">
+  <h2 class="lang" data-key="contactos_title">📞 Contactos</h2>
+  <ul>
+    <li>👤 Fundador: Carlos Oliveira</li>
+    <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
+  </ul>
+  <div class="visit-counter">Visitas: <span id="visitas-count">0</span></div>
+</section>
+
+<footer>
+  <span class="lang" data-key="footer">StyleLabs © 2025 — Criado por Carlos Oliveira</span>
+</footer>
+
+<a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
+
+<script>
+// Contador de visitas
+document.addEventListener('DOMContentLoaded', () => {
+  let visitas = localStorage.getItem('contadorVisitas') || 0;
+  visitas = parseInt(visitas) + 1;
+  localStorage.setItem('contadorVisitas', visitas);
+  document.getElementById('visitas-count').textContent = visitas;
+});
+
+// Tradução bilíngue
+const translations = {
+  en: {
+    nav_home: "Home",
+    nav_produtos: "Products",
+    nav_sobre: "About",
+    nav_privacidade: "Privacy",
+    nav_contactos: "Contacts",
+    home_title: "Welcome to StyleLabs",
+    home_text: "Find modern and customizable clothes and accessories",
+    produtos_title: "🛒 Products",
+    sobre_title: "About StyleLabs",
+    sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern and customizable clothes and accessories easily and safely.",
+    privacidade_title: "Privacy Policy",
+    privacidade_text: "We respect your privacy. All data provided via WhatsApp is used only to process orders and support.",
+    contactos_title: "📞 Contacts",
+    footer: "StyleLabs © 2025 — Created by Carlos Oliveira",
+    clients: "✔ Over 600 satisfied customers"
+  },
+  pt: {
+    nav_home: "Início",
+    nav_produtos: "Produtos",
+    nav_sobre: "Sobre",
+    nav_privacidade: "Privacidade",
+    nav_contactos: "Contactos",
+    home_title: "Bem-vindo à StyleLabs",
+    home_text: "Encontre roupas e acessórios modernos e personalizáveis",
+    produtos_title: "🛒 Produtos",
+    sobre_title: "Sobre a StyleLabs",
+    sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos personalizáveis de forma prática e segura.",
+    privacidade_title: "Política de Privacidade",
+    privacidade_text: "Respeitamos a sua privacidade. Todos os dados fornecidos via WhatsApp são usados apenas para processar pedidos e suporte.",
+    contactos_title: "📞 Contactos",
+    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira",
+    clients: "✔ Mais de 600 clientes satisfeitos"
+  }
+};
+
+document.getElementById('en').addEventListener('click', () => setLanguage('en'));
+document.getElementById('pt').addEventListener('click', () => setLanguage('pt'));
+
+function setLanguage(lang) {
+  document.querySelectorAll('.lang').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if(translations[lang][key]) el.textContent = translations[lang][key];
+  });
+}
+</script>
 
 </body>
 </html>
