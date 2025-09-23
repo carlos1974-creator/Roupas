@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StyleLabs – Roupas e Acessórios</title>
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; color:#333; }
-    header { background:#008080; color:white; padding:20px; text-align:center; position:relative; box-shadow:0 3px 6px rgba(0,0,0,0.2);}
-    header img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
-    .lang-switch { position:absolute; top:15px; right:15px; }
-    .lang-switch span { cursor:pointer; font-size:24px; margin-left:10px; }
-    nav { background:#e0e0e0; padding:12px; text-align:center; }
-    nav a { margin:0 12px; color:#008080; font-weight:bold; text-decoration:none; font-size:1em; }
-    nav a:hover { color:#e65100; }
-    main { max-width:1100px; margin:30px auto; padding:0 15px; }
-    section h2 { text-align:center; color:#e65100; font-size:2em; margin-bottom:20px; }
-    .products { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
-    .product { background:white; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.15); padding:15px; max-width:250px; text-align:center; transition:transform 0.2s;}
-    .product:hover { transform:translateY(-5px);}
-    .product-name { background:#f3d6f9; color:#c218c2; padding:10px; border-radius:6px; font-weight:bold; margin-bottom:10px; }
-    .btn-buy { display:inline-block; background:#003399; color:white; padding:10px 16px; border-radius:8px; font-weight:bold; text-decoration:none; margin-top:10px; }
-    .btn-buy:hover { background:#001a66; }
-    .contact-section { text-align:center; margin-top:50px; }
-    .contact-section ul { list-style:none; padding:0; margin:0; text-align:center; }
-    .contact-section li { margin:8px 0; }
-    .visit-counter { background:#22d563; color:white; font-weight:bold; font-size:1.2em; padding:10px 18px; border-radius:15px; display:inline-block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin-top:25px;}
-    .suggestions-btn { position:fixed; bottom:25px; right:25px; background:#22d563; color:white; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-    .suggestions-btn:hover { background:#18a74d; }
-    footer { text-align:center; padding:18px; background:#008080; color:white; margin-top:40px; box-shadow:0 -3px 6px rgba(0,0,0,0.2);}
-    @media (max-width:768px) {
-      header img.logo { max-width:100px; }
-      .products { flex-direction:column; align-items:center; }
-      .lang-switch { top:10px; right:10px;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleLabs – Roupas e Acessórios</title>
+<style>
+body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; color:#333; }
+header { background:#008080; color:white; padding:20px; text-align:center; position:relative; box-shadow:0 3px 6px rgba(0,0,0,0.2);}
+header img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+.lang-switch { position:absolute; top:15px; right:15px; }
+.lang-switch span { cursor:pointer; font-size:24px; margin-left:10px; }
+nav { background:#e0e0e0; padding:12px; text-align:center; }
+nav a { margin:0 12px; color:#008080; font-weight:bold; text-decoration:none; font-size:1em; }
+nav a:hover { color:#e65100; }
+main { max-width:1100px; margin:30px auto; padding:0 15px; }
+section h2 { text-align:center; color:#e65100; font-size:2em; margin-bottom:20px; }
+.products { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
+.product { background:white; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.15); padding:15px; max-width:250px; text-align:center; transition:transform 0.2s;}
+.product:hover { transform:translateY(-5px);}
+.product-name { background:#f3d6f9; color:#c218c2; padding:10px; border-radius:6px; font-weight:bold; margin-bottom:10px; }
+.btn-buy { display:inline-block; background:#003399; color:white; padding:10px 16px; border-radius:8px; font-weight:bold; text-decoration:none; margin-top:10px; }
+.btn-buy:hover { background:#001a66; }
+.contact-section { text-align:center; margin-top:50px; }
+.visit-counter { background:#22d563; color:white; font-weight:bold; font-size:1.2em; padding:10px 18px; border-radius:15px; display:block; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2); margin:25px auto;}
+.suggestions-btn { position:fixed; bottom:25px; right:25px; background:#22d563; color:white; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.suggestions-btn:hover { background:#18a74d; }
+footer { text-align:center; padding:18px; background:#008080; color:white; margin-top:40px; box-shadow:0 -3px 6px rgba(0,0,0,0.2);}
+@media (max-width:768px) {
+  header img.logo { max-width:100px; }
+  .products { flex-direction:column; align-items:center; }
+  .lang-switch { top:10px; right:10px;}
+}
+</style>
 </head>
 <body>
 
@@ -78,6 +76,7 @@
     <!-- Produto 2 Shein -->
     <div class="product">
       <div class="product-name lang" data-key="prod2">EMERY ROSE Casaco casual de manga comprida</div>
+      <img src="https://img.ltwebstatic.com/images3_pi/2023/10/10/1696925069f1e3d0d3e4c2b1d3c6d3e5.jpg" alt="EMERY ROSE Casaco" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: 14,39€</p>
       <a href="https://onelink.shein.com/16/51v8pridy7nn" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
@@ -85,6 +84,7 @@
     <!-- Produto 3 Shein -->
     <div class="product">
       <div class="product-name lang" data-key="prod3">Firla Jaqueta feminina Manga comprida</div>
+      <img src="https://img.ltwebstatic.com/images3_pi/2023/09/15/1694778923f1e3d0d3e4c2b1d3c6d3e5.jpg" alt="Firla Jaqueta" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: 13,99€</p>
       <a href="https://onelink.shein.com/16/51v8sk4ym7bi" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
@@ -105,32 +105,29 @@
   <p class="lang" data-key="privacidade_text">A sua privacidade é importante. Todos os dados coletados são usados apenas para processar pedidos e suporte.</p>
 </section>
 
-<section id="contactos">
-  <h2 class="lang" data-key="contactos_title">Contactos</h2>
-  <div class="contact-section">
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:contato@stylelabs.com">contato@stylelabs.com</a></li>
-      <li><strong>Telefone:</strong> +351 912 345 678</li>
-    </ul>
-  </div>
+<section id="contactos" class="contact-section">
+  <h2 class="lang" data-key="contactos_title">📞 Contactos</h2>
+  <ul>
+    <li>👤 Fundador: Carlos Oliveira</li>
+  </ul>
 </section>
 
-<div class="visit-counter" id="visitCounter">Visitante nº 1</div>
+<div class="visit-counter" id="visitCounter"></div>
 
-<a href="https://wa.me/351912345678?text=Olá%20StyleLabs,%20tenho%20uma%20sugestão" class="suggestions-btn" target="_blank">💬 Enviar sugestão</a>
+<a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
 
 <footer>
-  <p>&copy; 2025 StyleLabs. Todos os direitos reservados.</p>
+  <span class="lang" data-key="footer">StyleLabs © 2025 — Criado por Carlos Oliveira</span>
 </footer>
 
 <script>
-  // Contador de visitas
+  // Contador de visitas centrado
   let visitCount = localStorage.getItem('visitCount') || 0;
   visitCount++;
   localStorage.setItem('visitCount', visitCount);
-  document.getElementById('visitCounter').textContent = `Visitante nº ${visitCount}`;
+  document.getElementById('visitCounter').textContent = `Visitas: ${visitCount}`;
 
-  // Alternar idiomas (simples)
+  // Alternar idiomas simples
   document.getElementById('pt').addEventListener('click', () => {
     document.documentElement.lang = 'pt';
     alert('Idioma alterado para Português');
