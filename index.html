@@ -5,16 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StyleLabs – Mais Produtos</title>
 
-<!-- AdSense script -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875462679161698"
-     crossorigin="anonymous"></script>
-
 <style>
-body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; color:#333; position: relative;}
-header { background:#008080; color:white; padding:20px; text-align:center; position:relative; box-shadow:0 3px 6px rgba(0,0,0,0.2);}
+body { margin:0; font-family: Arial, sans-serif; background: #f5f5f5; color:#333;}
+header { background:#008080; color:white; padding:20px; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.2);}
 header img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; border:4px solid #c218c2; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);}
-.lang-switch { position:absolute; top:15px; right:15px; }
-.lang-switch span { cursor:pointer; font-size:24px; margin-left:10px; }
 nav { background:#e0e0e0; padding:12px; text-align:center; }
 nav a { margin:0 12px; color:#008080; font-weight:bold; text-decoration:none; font-size:1em; }
 nav a:hover { color:#e65100; }
@@ -26,11 +20,9 @@ section h2 { text-align:center; color:#e65100; font-size:2em; margin-bottom:20px
 .product-name { background:#f3d6f9; color:#c218c2; padding:10px; border-radius:6px; font-weight:bold; margin-bottom:10px; }
 .btn-buy { display:inline-block; background:#003399; color:white; padding:10px 16px; border-radius:8px; font-weight:bold; text-decoration:none; margin-top:10px; }
 .btn-buy:hover { background:#001a66; }
-footer { text-align:center; padding:18px; background:#008080; color:white; margin-top:40px; box-shadow:none;}
+footer { text-align:center; padding:18px; background:#008080; color:white; margin-top:40px; }
 @media (max-width:768px) {
-  header img.logo { max-width:100px; }
   .products { flex-direction:column; align-items:center; }
-  .lang-switch { top:10px; right:10px;}
 }
 </style>
 </head>
@@ -38,143 +30,74 @@ footer { text-align:center; padding:18px; background:#008080; color:white; margi
 
 <header>
   <img src="logo.png" alt="StyleLabs Logo" class="logo">
-  <div class="lang-switch">
-    <span id="pt">🇵🇹</span>
-    <span id="en">🇬🇧</span>
-  </div>
-  <h1 class="lang" data-key="header_title">StyleLabs – Mais Produtos</h1>
-  <p style="text-align:center; font-weight:bold; margin-top:5px;">
-    <span style="color:white;">✔</span>
-    <span style="color:#22d563;" class="lang" data-key="satisfied">Mais de 600 clientes satisfeitos</span>
-  </p>
+  <h1>StyleLabs – Mais Produtos</h1>
 </header>
 
 <nav>
-  <a href="index.html" class="lang" data-key="nav_home">Início</a>
-  <a href="#produtos" class="lang" data-key="nav_produtos">Produtos</a>
-  <a href="#sobre" class="lang" data-key="nav_sobre">Sobre</a>
-  <a href="#privacidade" class="lang" data-key="nav_privacidade">Privacidade</a>
-  <a href="#contactos" class="lang" data-key="nav_contactos">Contactos</a>
+  <a href="index.html">Início</a>
+  <a href="produtos.html">Produtos</a>
+  <a href="#contactos">Contactos</a>
 </nav>
 
 <main>
 <section id="produtos">
-  <h2 class="lang" data-key="produtos_title">🛒 Mais Produtos</h2>
-
+  <h2>🛒 Mais Produtos</h2>
   <div class="products">
     <div class="product">
-      <div class="product-name lang" data-key="prod7">Vestido Casual Feminino</div>
-      <img src="vestido_casual_feminino.jpg" alt="Vestido Casual Feminino" style="width:100%; border-radius:5px; margin-bottom:10px;">
-      <p>Preço: 24,99€</p>
-      <a href="#" class="btn-buy">Comprar</a>
+      <div class="product-name">Suéter Feminino</div>
+      <img src="Sueter_feminino.jpg" alt="Suéter Feminino" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: 15,37€</p>
+      <a href="https://onelink.shein.com/17/52yz7474yexp" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
     <div class="product">
-      <div class="product-name lang" data-key="prod8">Camisa Masculina Manga Curta</div>
-      <img src="camisa_masculina.jpg" alt="Camisa Masculina" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <div class="product-name">EMERY ROSE Casaco casual</div>
+      <img src="Casaco_casual_de_manga_comprida.jpg" alt="Casaco EMERY ROSE" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: 14,39€</p>
+      <a href="https://onelink.shein.com/16/51vcxow25lw7" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+
+    <div class="product">
+      <div class="product-name">Firla Jaqueta feminina</div>
+      <img src="Firla_Jaqueta_feminina_Manga_comprida.jpg" alt="Jaqueta Firla" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: 13,99€</p>
+      <a href="https://onelink.shein.com/16/51v8pridy7nn" target="_blank" class="btn-buy">Comprar na Shein</a>
+    </div>
+
+    <div class="product">
+      <div class="product-name">Bolsa Térmica</div>
+      <img src="bolsa_termica_para_almoco_a_prova_dagua.jpg" alt="Bolsa Térmica" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: 19,99€</p>
-      <a href="#" class="btn-buy">Comprar</a>
+      <a href="https://onelink.shein.com/16/51vm3kv34km6" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
     <div class="product">
-      <div class="product-name lang" data-key="prod9">Calças Jeans Unissexo</div>
-      <img src="calcas_jeans.jpg" alt="Calças Jeans" style="width:100%; border-radius:5px; margin-bottom:10px;">
-      <p>Preço: 29,50€</p>
-      <a href="#" class="btn-buy">Comprar</a>
-    </div>
-
-    <div class="product">
-      <div class="product-name lang" data-key="prod10">Blusa de Tricô Feminina</div>
-      <img src="blusa_trico.jpg" alt="Blusa de Tricô" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <div class="product-name">Mochila Casual</div>
+      <img src="mochila_casual.jpg" alt="Mochila Casual" style="width:100%; border-radius:5px; margin-bottom:10px;">
       <p>Preço: 22,50€</p>
-      <a href="#" class="btn-buy">Comprar</a>
+      <a href="https://onelink.shein.com/16/51vm3abcde" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
 
     <div class="product">
-      <div class="product-name lang" data-key="prod11">Jaqueta Jeans Masculina</div>
-      <img src="jaqueta_jeans.jpg" alt="Jaqueta Jeans Masculina" style="width:100%; border-radius:5px; margin-bottom:10px;">
-      <p>Preço: 34,99€</p>
-      <a href="#" class="btn-buy">Comprar</a>
-    </div>
-
-    <div class="product">
-      <div class="product-name lang" data-key="prod12">Tênis Casual Unissexo</div>
-      <img src="tenis_casual.jpg" alt="Tênis Casual" style="width:100%; border-radius:5px; margin-bottom:10px;">
-      <p>Preço: 27,99€</p>
-      <a href="#" class="btn-buy">Comprar</a>
+      <div class="product-name">Tênis Esportivo</div>
+      <img src="tenis_esportivo.jpg" alt="Tênis Esportivo" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <p>Preço: 29,99€</p>
+      <a href="https://onelink.shein.com/16/51vm3xyz12" target="_blank" class="btn-buy">Comprar na Shein</a>
     </div>
   </div>
 </section>
 
-<section id="sobre">
-  <h2 class="lang" data-key="sobre_title">Sobre a StyleLabs</h2>
-  <p class="lang" data-key="sobre_text">A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos de forma prática e segura.</p>
-</section>
-
-<section id="privacidade">
-  <h2 class="lang" data-key="privacidade_title">Política de Privacidade</h2>
-  <p class="lang" data-key="privacidade_text">A sua privacidade é importante. Todos os dados coletados são usados apenas para processar pedidos e suporte.</p>
-</section>
-
-<section id="contactos" class="contact-section">
-  <h2 class="lang" data-key="contactos_title">📞 Contactos</h2>
-  <ul>
+<section id="contactos" style="text-align:center; margin-top:50px;">
+  <h2>📞 Contactos</h2>
+  <ul style="list-style:none; padding:0;">
     <li>👤 Fundador: Carlos Oliveira</li>
     <li>📱 WhatsApp: <a href="https://wa.me/351928332158" target="_blank">+351 928 332 158</a></li>
   </ul>
 </section>
 
 <footer>
-  <span class="lang" data-key="footer">StyleLabs © 2025 — Criado por Carlos Oliveira</span>
+  StyleLabs © 2025 — Criado por Carlos Oliveira
 </footer>
-
-<script>
-const translations = {
-  en: {
-    header_title: "StyleLabs – More Products",
-    satisfied: "Over 600 satisfied customers",
-    nav_home: "Home",
-    nav_produtos: "Products",
-    nav_sobre: "About",
-    nav_privacidade: "Privacy",
-    nav_contactos: "Contacts",
-    produtos_title: "🛒 More Products",
-    sobre_title: "About StyleLabs",
-    sobre_text: "StyleLabs was created by Carlos Oliveira to offer modern clothes and accessories easily and safely.",
-    privacidade_title: "Privacy Policy",
-    privacidade_text: "Your privacy is important. All collected data is used only to process orders and support.",
-    contactos_title: "📞 Contacts",
-    footer: "StyleLabs © 2025 — Created by Carlos Oliveira"
-  },
-  pt: {
-    header_title: "StyleLabs – Mais Produtos",
-    satisfied: "Mais de 600 clientes satisfeitos",
-    nav_home: "Início",
-    nav_produtos: "Produtos",
-    nav_sobre: "Sobre",
-    nav_privacidade: "Privacidade",
-    nav_contactos: "Contactos",
-    produtos_title: "🛒 Mais Produtos",
-    sobre_title: "Sobre a StyleLabs",
-    sobre_text: "A StyleLabs foi criada por Carlos Oliveira para oferecer roupas e acessórios modernos de forma prática e segura.",
-    privacidade_title: "Política de Privacidade",
-    privacidade_text: "A sua privacidade é importante. Todos os dados coletados são usados apenas para processar pedidos e suporte.",
-    contactos_title: "📞 Contactos",
-    footer: "StyleLabs © 2025 — Criado por Carlos Oliveira"
-  }
-};
-
-function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  document.querySelectorAll('.lang').forEach(el => {
-    const key = el.dataset.key;
-    if(key && translations[lang][key]) el.textContent = translations[lang][key];
-  });
-}
-
-document.getElementById('pt').addEventListener('click', () => setLanguage('pt'));
-document.getElementById('en').addEventListener('click', () => setLanguage('en'));
-</script>
 
 </body>
 </html>
