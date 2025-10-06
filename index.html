@@ -171,6 +171,7 @@ footer { text-align:center; padding:18px; background:#008080; color:white; margi
   </ul>
 </section>
 
+<!-- Contador de visitas -->
 <div class="visit-counter" id="visitCounter"></div>
 
 <a href="https://wa.me/351928332158?text=Olá,+tenho+uma+sugestão" class="suggestions-btn" target="_blank">💬 Sugestões / Recomendações</a>
@@ -191,11 +192,13 @@ footer { text-align:center; padding:18px; background:#008080; color:white; margi
 </footer>
 
 <script>
+// Contador de visitas
 let visitCount = localStorage.getItem('visitCount') || 0;
 visitCount++;
 localStorage.setItem('visitCount', visitCount);
-document.getElementById('visitCounter').textContent = Visitas: ${visitCount};
+document.getElementById('visitCounter').textContent = `Visitas: ${visitCount}`;
 
+// Tradução idiomas
 const translations = {
   en: {
     header_title: "StyleLabs – Clothes & Accessories",
